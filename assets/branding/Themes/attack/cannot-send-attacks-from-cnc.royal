@@ -1,0 +1,3 @@
+[38;5;196m❓❓ [38;5;255mYou can only use the API url. Copy the two lines below. [38;5;196m❓❓[38;5;255m
+https://YOUR_DOMAIN/api/attack?username=<<$user.username>>&password=
+YOUR_PASSWORD_HERE&host={HOST}&port={PORT}&time={TIME}&method={METHOD}

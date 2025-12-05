@@ -1,0 +1,179 @@
+{
+  "note": "Configurations for Telegram and Discord bots",
+  "discord": {
+    "enable": false,
+    "token": "Discord Token Bot Here ( https://discord.com/developers/applications )",
+    "channel_id": "Public Channel ID",
+    "channel_admin_id": "Channel Admin ID",
+    "prefix": "?",
+    "compact_mode": true,
+    "maintenance_mode": {
+      "enabled": false,
+      "message": "🚧 Bot is currently under maintenance. Please try again later."
+    },
+    "commands": {
+      "enabled": true,
+      "disable_commands": [
+        "logs_delete_db",
+        "logs_delete"
+      ],
+      "admin_only": true,
+      "channel_admin_cmd": [
+        "add_user",
+        "create_user",
+        "delete_user",
+        "setid_discord",
+        "setid_telegram",
+        "view_user_plan",
+        "edit_user",
+        "view_user_logs",
+        "key_info",
+        "logs_delete_db",
+        "logs_delete",
+        "logs_search"
+      ],
+      "channel_public_cmd": [
+        "help",
+        "id",
+        "buy",
+        "ip",
+        "shop",
+        "methods",
+        "attack",
+        "ongoing",
+        "cfx",
+        "mc",
+        "plan",
+        "stats"
+      ],
+      "role_restricted_commands": {
+        "admin": [
+          "add_user",
+          "create_user",
+          "delete_user",
+          "setid_discord",
+          "setid_telegram",
+          "view_user_plan",
+          "edit_user",
+          "view_user_logs"
+        ],
+        "owner": [
+          "key_info",
+          "logs_delete_db",
+          "logs_delete",
+          "logs_search"
+        ],
+        "vip": [
+          "test"
+        ]
+      },
+      "cooldowns": {
+        "create_user": 30,
+        "delete_user": 500
+      },
+      "command_schedule": {
+        "note": "Commands allowed only during specified times. For example, 'create_user' is permitted between 1 AM and 11 AM, but not overnight.",
+        "restricted_commands": {
+          "create_user": {
+            "timezone": "Europe/Paris",
+            "start_time": "07:00",
+            "end_time": "23:00"
+          },
+          "delete_user": {
+            "timezone": "Europe/Paris",
+            "start_time": "09:00",
+            "end_time": "23:00"
+          }
+        }
+      }
+    }
+  },
+  "telegram": {
+    "enable": false,
+    "token": "Telegram Bot Token",
+    "channel_id": "-PubLicChannelID",
+    "channel_admin_id": "-AdminChannelID",
+    "compact_mode": true,
+    "maintenance_mode": {
+      "enabled": false,
+      "message": "🚧 Bot is currently under maintenance. Please try again later."
+    },
+    "commands": {
+      "enabled": true,
+      "admin_only": false,
+      "disable_commands": [
+        "logs_delet",
+        "logs_delet"
+      ],
+      "channel_admin_cmd": [
+        "add_user",
+        "update",
+        "create_user",
+        "delete_user",
+        "setid_discord",
+        "setid_telegram",
+        "view_user_plan",
+        "edit_user",
+        "view_user_logs",
+        "key_info",
+        "logs_delete_db",
+        "logs_delete",
+        "logs_search"
+      ],
+      "channel_public_cmd": [
+        "help",
+        "ip",
+        "buy",
+        "id",
+        "shop",
+        "methods",
+        "attack",
+        "ongoing",
+        "cfx",
+        "mc",
+        "plan",
+        "stats"
+      ],
+      "role_restricted_commands": {
+        "admin": [
+          "add_user",
+          "create_user",
+          "delete_user",
+          "setid_discord",
+          "setid_telegram",
+          "view_user_plan",
+          "edit_user",
+          "view_user_logs"
+        ],
+        "owner": [
+          "key",
+          "logs_delete_db",
+          "logs_delete",
+          "logs_search",
+          "update",
+          "download",
+          "reboot"
+        ],
+        "vip": [
+          "test"
+        ]
+      },
+      "cooldowns": {
+        "create_user": 300,
+        "delete_user": 180
+      },
+      "command_schedule": {
+        "restricted_commands": {
+          "test_user": {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          },
+          "test1_user": {
+            "start_time": "09:00",
+            "end_time": "23:00"
+          }
+        }
+      }
+    }
+  }
+}

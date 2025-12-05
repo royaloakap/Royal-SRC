@@ -1,0 +1,11 @@
+<<clear()>>
+<<$default_screen>>
+[38;5;255mYour 
+<<skipline()>>
+[38;5;255mMethods 
+<<skipline()>>
+[38;5;255mHere! ( 100% Customize )
+<<skipline()>>
+[38;5;255mOr put commands "methods-list" for view list
+
+

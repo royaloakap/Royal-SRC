@@ -1,0 +1,5 @@
+[38;5;255mYou cannot attack [38;5;255m<<$target>>[38;5;255m
+[38;5;255mPower Saving Status: <<$user.bypass_power_saving>>[38;5;255m
+because [38;5;255m<<$reason>>[38;5;255m.
+
+[38;5;255mAttack on [38;5;46m<<$target>>[38;5;255m Finished in [38;5;46m<<$wait>>[38;5;255m seconds...

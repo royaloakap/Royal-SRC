@@ -1,0 +1,15 @@
+<<clear()>>
+<<newpwdposition(45,12)>>
+<<cnewpwdposition(45,14)>>   
+           
+           
+           
+           
+           
+           
+           
+
+                          \x1b[38;5;15mNew Password:     \x1b[30m\x1b[47m                     \x1b[0m
+
+                          \x1b[38;5;15mConfirm Password: \x1b[30m\x1b[47m                     \x1b[0m
+				   

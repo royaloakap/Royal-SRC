@@ -1,0 +1,7 @@
+
+    JOIN OUR [38;5;045m <<$cnc_name>>[38;5;255m INVEST DISCORD SERVER!
+    [38;5;045m<<$discord.link>>[38;5;255m
+	This link will be displayed for [38;5;046m60[38;5;255m seconds
+    <<sleep(60000)>>
+    <<clear()>>
+

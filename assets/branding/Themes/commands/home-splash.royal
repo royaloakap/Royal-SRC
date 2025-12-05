@@ -1,0 +1,12 @@
+<<clear()>>
+<<$default_screen>>
+ _._     _,-'""`-._
+(,-.`._,'(       |\`-/|
+    `-.-' \ )-`( , o o)
+          `-    \`_`"'-
+<<skipline()>>
+[0mSuccessfully authenticated.
+[0mWelcome to [34;4;1m<<$cnc_name>>[0m, <<$user.username>>.
+<<skipline()>>
+Put "help" for view help page.
+

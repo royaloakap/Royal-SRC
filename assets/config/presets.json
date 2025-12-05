@@ -1,0 +1,187 @@
+{
+  "Plans": [
+    {
+      "Name": "NOVIP",
+      "Description": "Starter build NO VIP ",
+      "Price": "€5.00",
+      "Max_Sessions": 1,
+      "Max_Times": 60,
+      "Cooldown": 45,
+      "Max_Concurrents": 1,
+      "DaysActive": 5,
+      "MaxDailyAttacks": 100,
+      "Themes": "Themes",
+      "Api_Acces": false,
+      "Permissions": {
+        "Private_Acces": false,
+        "Bypass_PowerSaving": false,
+        "Reseller_Acces": false,
+        "Bypass_Blacklist": false,
+        "VIP_Acces": false,
+        "Holder_Acces": false,
+        "custom_roles": {
+          "enabled": false,
+          "roles": [
+            {
+              "role_name": "main_network"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "VIP",
+      "Description": "Starter build VIP",
+      "Price": "€10.00",
+      "Max_Sessions": 1,
+      "Max_Times": 120,
+      "Cooldown": 30,
+      "Max_Concurrents": 1,
+      "DaysActive": 31,
+      "MaxDailyAttacks": 250,
+      "Themes": "Themes",
+      "Api_Acces": false,
+      "Permissions": {
+        "Private_Acces": false,
+        "Bypass_PowerSaving": false,
+        "Bypass_Blacklist": false,
+        "Reseller_Acces": false,
+        "VIP_Acces": true,
+        "Holder_Acces": false,
+        "custom_roles": {
+          "enabled": false,
+          "roles": [
+            {
+              "role_name": "main_network"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "API",
+      "Description": "Starter API",
+      "Price": "€40.00",
+      "Max_Sessions": 1,
+      "Max_Times": 300,
+      "Cooldown": 10,
+      "Max_Concurrents": 2,
+      "DaysActive": 31,
+      "MaxDailyAttacks": 500,
+      "Themes": "Themes",
+      "Api_Acces": true,
+      "Permissions": {
+        "Private_Acces": false,
+        "Bypass_PowerSaving": false,
+        "Bypass_Blacklist": false,
+        "Reseller_Acces": false,
+        "VIP_Acces": true,
+        "Holder_Acces": false,
+        "custom_roles": {
+          "enabled": false,
+          "roles": [
+            {
+              "role_name": "main_network"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Addons_Settings": {
+    "addons_is_enabled": true,
+    "items": [
+      {
+        "enabled": true,
+        "Name": "days",
+        "Description": "Addon for Add 1 Day",
+        "count": 1,
+        "Price": "€1.50"
+      },
+      {
+        "enabled": true,
+        "Name": "concs",
+        "Description": "Addon for Add concurrents",
+        "count": 1,
+        "Price": "€15.00"
+      },
+      {
+        "enabled": true,
+        "Name": "maxtime",
+        "Description": "Addon for Add 60 Minutes",
+        "count": 60,
+        "Price": "€10.00"
+      },
+      {
+        "enabled": true,
+        "Name": "cooldown",
+        "Description": "Addon for remove cooldown",
+        "count": 0,
+        "Price": "€30.00"
+      },
+      {
+        "enabled": true,
+        "Name": "daily_attacks",
+        "Description": "Addon for Add 200 Daily Attacks",
+        "count": 200,
+        "Price": "€10.00"
+      },
+      {
+        "enabled": false,
+        "Name": "vip",
+        "Description": "Access To VIP Methods",
+        "status": false,
+        "Price": "€30.00"
+      },
+      {
+        "enabled": false,
+        "Name": "api",
+        "Description": "Access To API",
+        "status": true,
+        "Price": "€70.00"
+      },
+      {
+        "enabled": false,
+        "Name": "reseller",
+        "Description": "Access To Reseller",
+        "status": true,
+        "Price": "€120.00"
+      },
+      {
+        "enabled": false,
+        "Name": "holder",
+        "Description": "Access To Holder Methods",
+        "status": true,
+        "Price": "€15.00"
+      },
+      {
+        "enabled": false,
+        "Name": "private",
+        "Description": "Access To Private Methods",
+        "status": true,
+        "Price": "€150.00"
+      },
+      {
+        "enabled": true,
+        "Name": "powersaving",
+        "Description": "Addon for Add bypass powersaving",
+        "status": true,
+        "Price": "€50.00"
+      },
+      {
+        "enabled": false,
+        "Name": "bypass_blacklist",
+        "Description": "Addon for bypass blacklist",
+        "status": true,
+        "Price": "€60.00"
+      },
+      {
+        "enabled": true,
+        "Name": "unbanned",
+        "Description": "Addon for unban Your Account",
+        "status": false,
+        "Price": "€30.00"
+      }
+    ]
+  }
+}

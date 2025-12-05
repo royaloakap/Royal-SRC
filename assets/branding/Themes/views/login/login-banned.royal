@@ -1,0 +1,5 @@
+\x1b[0m 
+                > Your account has been [38;5;196mbanned[38;5;255m 
+                    from [38;5;45m<<$cnc_name>>[38;5;255m for:
+                <<$user.banned_msg>>
+<<sleep(10000)>>

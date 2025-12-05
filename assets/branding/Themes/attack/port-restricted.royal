@@ -1,0 +1,4 @@
+METHODS PORT RANGE
+Min Port : [38;5;48m<<$min_port>>[38;5;255m         
+Max Port : [38;5;196m<<$max_port>>[38;5;255m 
+Current Port : [38;5;206m<<$port>>[38;5;255m

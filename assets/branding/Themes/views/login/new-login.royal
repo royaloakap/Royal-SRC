@@ -1,0 +1,13 @@
+<<clear()>>
+<<usernameposition(37,11)>>
+<<passwordposition(37,13)>>         
+           
+           
+           
+           
+           
+           
+           
+                          [38;5;255mUsername: \x1b[30m\x1b[47m                     \x1b[0m
+
+                          [38;5;255mPassword: \x1b[30m\x1b[47m                     \x1b[0m

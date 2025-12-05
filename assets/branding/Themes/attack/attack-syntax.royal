@@ -1,0 +1,7 @@
+<<clear()>>
+
+[38;5;220m [38;5;255mUsage: [38;5;255m<[38;5;46mmethod[38;5;255m> <[38;5;46mtarget[38;5;255m> <[38;5;46mport[38;5;255m> <[38;5;46mduration[38;5;255m>
+[38;5;220m Example L4[38;5;196m: [38;5;255mudp 8.8.8.8 53 <<$user.max_time>>
+[38;5;220m Example L7[38;5;196m: [38;5;255mhttp https://website.com 443 <<$user.max_time>>
+[38;5;255m
+

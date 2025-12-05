@@ -1,0 +1,339 @@
+{
+    "Bot_Invest_Setup": {
+        "enabled": false,
+        "token": "Discord Token Bot",
+        "discord_invite_link": "https://discord.gg/RoyalC2",
+        "embed_welcome_user": "👋 **Welcome to your investor profile setup!**\n\nTo complete your configuration, please follow these steps:\n\n1️⃣ Provide your **C2 username** (the account name that received the purchased plan)\n\n⚠️ **Important Information:**\n• You have **60 seconds** to respond\n• Maximum of **2 attempts** allowed\n• Make sure to enter the exact username as shown on C2\n\n🔍 **Not sure about your username?**\nCheck your C2 account settings or the email confirmation you received after purchase.\n\n💬 Simply type your C2 username in this channel to proceed",
+        "embed_welcome_invest": "First of all, thank you, if you are here, it is because you have decided to place your trust in us and in the prosperity of our beautiful server.\n\n- PRIVATE LIVING ROOM :eyes:\nWe have dedicated a text lounge to you, which will allow you to place orders with the INVEST BOT, communicate directly with the managers and be kept up to date with any new information.\n\n- BOT INVEST :space_invader:\nWe have made several commands available to you allowing you to find out more about your permissions /acces, and to guide you in your future choices:\n**/profil**, **/acces**, **/perm**\n\n- CREATOR CODE & COMMISSIONS :money_with_wings:\nAs an investor, you can earn passive income through our referral system! When a client purchases a plan on C2, they can enter a creator code. Your creator code is simply your Discord ID. Every time someone uses your Discord ID as their creator code when purchasing a plan, you automatically receive 30%% commission on that sale! Share your Discord ID with potential clients and watch your earnings grow.\n\nThank you for your attention, we wish you a great adventure on %s :kiss:",
+        "pourcentage_of_profit": "30",
+        "promo_code_settings": {
+            "enabled": false,
+            "percentage": "25",
+            "max_uses": 100000,
+            "max_uses_per_user": 5000,
+            "actif_on_shop_connection": true,
+            "actif_on_plan_purchase": true,
+            "actif_on_addon_purchase": true,
+            "actif_with_shop_buy_cmd": true,
+            "actif_on_bot_invest_cmd_acces": true,
+            "active_on_bot_invest_cmd_level": false
+        },
+        "maintenance_mode": {
+            "enabled": false,
+            "message": "🚧 Bot is currently under maintenance. Please try again later."
+        },
+        "commands": {
+            "enabled": true,
+            "disable_commands": [],
+            "admin_only": true,
+            "role_restricted_commands": {
+                "admin": [
+                    "view_user_profil"
+                ],
+                "owner": [
+                    "add_cash_to_parrainage",
+                    "add_cash_to_user",
+                    "remove_cash_from_user",
+                    "remove_cash_from_parrainage",
+                    "set_level_to_user",
+                    "set_pack_to_user",
+                    "maintenance"
+                ]
+            },
+            "cooldowns": {
+                "add_cash_to_parrainage": 0,
+                "add_cash_to_user": 0,
+                "remove_cash_from_user": 0,
+                "remove_cash_from_parrainage": 0,
+                "set_level_to_user": 0,
+                "set_pack_to_user": 0
+            },
+            "pack_settings": [
+                {
+                    "custom_pack_name": "pirate",
+                    "description": "🌟 **FREEDOM PACK** 🌟\n\n🔓 Unlock unlimited attack capabilities!\n\n✨ **What you get:**\n• Attack ANY target without restrictions\n• Bypass government domain protections (.gov, .gouv)\n• No blacklist limitations\n• Full offensive freedom\n\n💪 **Perfect for:**\n• Professional stress testing\n• Advanced security research\n• Unrestricted penetration testing\n\n⚡ Break free from limitations and attack with confidence!",
+                    "note": "you can remove the restrictions or add the permissions for the pack below remove restrictions:(days,concs,maxtime,cooldown,daily_attacks) Add permissions:(powersaving,bypass_blacklist,private,holder,reseller,api,vip ) ",
+                    "remove_restrictions-or-add_permissions": [
+                        "bypass_blacklist"
+                    ],
+                    "acces_to_commands": [],
+                    "price": "60.00"
+                },
+                {
+                    "custom_pack_name": "lucky",
+                    "description": "⚡ **SPEED DEMON PACK** ⚡\n\n🚀 Attack at lightning speed!\n\n✨ **What you get:**\n• ZERO cooldown between attacks\n• Instant consecutive strikes\n• Maximum attack frequency\n• No waiting time\n\n💪 **Perfect for:**\n• Rapid-fire stress testing\n• High-volume campaigns\n• Time-sensitive operations\n\n🔥 Strike fast, strike hard - no delays!",
+                    "note": "you can remove the restrictions or add the permissions for the pack below remove restrictions:(days,concs,maxtime,cooldown,daily_attacks) Add permissions:(powersaving,bypass_blacklist,private,holder,reseller,api,vip ) ",
+                    "remove_restrictions-or-add_permissions": [
+                        "cooldown"
+                    ],
+                    "acces_to_commands": [],
+                    "price": "40.00"
+                },
+                {
+                    "custom_pack_name": "dog",
+                    "description": "🐕 **COMMANDER PACK** 🐕\n\n👑 Lead your attack squad!\n\n✨ **What you get:**\n• Put 1 user on your 'leash'\n• Auto-replicate your attacks\n• Your dog mirrors every strike\n• Uses their concurrent slots\n\n💪 **Perfect for:**\n• Coordinated campaigns\n• Amplified impact\n• Team operations\n\n🎯 **Commands unlocked:**\n• `dog add` - Add a follower\n• `dog list` - View your pack\n• `dog delete` - Remove followers\n\n⚔️ Double the power, double the impact!",
+                    "note": "you can remove the restrictions or add the permissions for the pack below remove restrictions:(days,concs,maxtime,cooldown,daily_attacks) Add permissions:(powersaving,bypass_blacklist,private,holder,reseller,api,vip ) ",
+                    "remove_restrictions-or-add_permissions": [],
+                    "dog_count": "1",
+                    "acces_to_commands": [
+                        "dog",
+                        "dog add",
+                        "dog list",
+                        "dog delete"
+                    ],
+                    "price": "120.00"
+                },
+                {
+                    "custom_pack_name": "spammer",
+                    "description": "⚡ **MULTI-STRIKE PACK** ⚡\n\n🎯 Attack multiple targets at once!\n\n✨ **What you get:**\n• Disable power saving mode\n• Simultaneous target strikes\n• Maximum offensive output\n• No automatic cooldowns\n\n💪 **Perfect for:**\n• Mass campaigns\n• Multi-target operations\n• Aggressive strategies\n\n⚠️ **Note:** Watch your concurrent slots!\n\n🔥 Unleash the spam!",
+                    "note": "",
+                    "remove_restrictions-or-add_permissions": [
+                        "powersaving"
+                    ],
+                    "acces_to_commands": [],
+                    "price": "50.00"
+                },
+                {
+                    "custom_pack_name": "cantwait",
+                    "description": "♾️ **INFINITE STRIKES PACK** ♾️\n\n🚀 Never stop attacking!\n\n✨ **What you get:**\n• 99,999 daily attacks\n• No midnight reset wait\n• Unlimited daily operations\n• 24/7 attack capability\n\n💪 **Perfect for:**\n• Non-stop campaigns\n• High-frequency testing\n• Round-the-clock operations\n\n⏰ Why wait for midnight?\n\n🎯 Attack without limits!",
+                    "note": "",
+                    "remove_restrictions-or-add_permissions": [
+                        "daily_attacks"
+                    ],
+                    "acces_to_commands": [],
+                    "price": "25.00"
+                },
+                {
+                    "custom_pack_name": "private",
+                    "description": "🔐 **PRIVATE ARSENAL PACK** 🔐\n\n🎭 Access exclusive methods!\n\n✨ **What you get:**\n• Private attack methods\n• Exclusive techniques\n• Advanced methodologies\n• VIP-only strategies\n\n💪 **Perfect for:**\n• Premium operations\n• Advanced targeting\n• Professional use cases\n\n🌟 **Advantage:**\nMethods unavailable to regular users!\n\n🔑 Elite tools for elite users + Acces to repeat cmd!",
+                    "note": "",
+                    "remove_restrictions-or-add_permissions": [
+                        "private"
+                    ],
+                    "acces_to_commands": [
+                        "repeat"
+                    ],
+                    "price": "40.00"
+                },
+                {
+                    "custom_pack_name": "holder",
+                    "description": "🏠 **RESIDENTIAL EXPERT PACK** 🏠\n\n🎯 Dominate home networks!\n\n✨ **What you get:**\n• Holder attack methods\n• Residential IP targeting\n• Domestic network optimization\n• Home infrastructure attacks\n\n💪 **Perfect for:**\n• ISP testing\n• Home network analysis\n• Residential targets\n• Domestic infrastructure\n\n🌐 **Specialized for:**\nAttacks designed for home IPs!\n\n🔨 Master residential networks!",
+                    "note": "",
+                    "remove_restrictions-or-add_permissions": [
+                        "holder"
+                    ],
+                    "acces_to_commands": [],
+                    "price": "40.00"
+                }
+            ],
+            "level_settings": [
+                {
+                    "level_name": "1",
+                    "description": "🌱 **STARTER INVESTOR** 🌱\n\n💼 Begin your investment journey!\n\n✨ **Benefits:**\n• Create 1 account every 31 days\n• Access to 5DAYS plan\n• Start earning referral income\n• Build your network\n\n🎯 **Commands unlocked:**\n• `add-user` - Create accounts\n• `level` - View your profile\n\n💰 **Investment:** 60.00€\n\n🚀 Your path to passive income starts here!",
+                    "how_many_accounts_can_be_created": 1,
+                    "days_active": 31,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS"
+                    ],
+                    "price": "60.00",
+                    "acces_to_commands": [
+                        "add-user",
+                        "level"
+                    ]
+                },
+                {
+                    "level_name": "2",
+                    "description": "💎 **ACTIVE INVESTOR** 💎\n\n📈 Double your opportunities!\n\n✨ **Enhanced Benefits:**\n• Create 2 accounts every 31 days\n• Access to 5DAYS plan\n• Faster network growth\n• Increased earning potential\n\n🎯 **Commands unlocked:**\n• `add-user` - Create accounts\n• `level` - View your profile\n\n💰 **Investment:** 90.00€\n\n⚡ More accounts = More income!",
+                    "how_many_accounts_can_be_created": 2,
+                    "days_active": 31,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS"
+                    ],
+                    "price": "90.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user"
+                    ]
+                },
+                {
+                    "level_name": "3",
+                    "description": "🔥 **ADVANCED INVESTOR** 🔥\n\n🚀 Extended plan access!\n\n✨ **Premium Benefits:**\n• Create 2 accounts every 31 days\n• Access to 5DAYS & 14DAYS plan\n• Longer-lasting accounts\n• Better client retention\n\n🎯 **Commands unlocked:**\n• `add-user` - Create accounts\n• `level` - View your profile\n\n💰 **Investment:** 150.00€\n\n⭐ Quality over quantity!",
+                    "how_many_accounts_can_be_created": 2,
+                    "days_active": 31,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS"
+                    ],
+                    "price": "150.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user"
+                    ]
+                },
+                {
+                    "level_name": "4",
+                    "description": "👑 **ELITE INVESTOR** 👑\n\n💪 Maximum flexibility!\n\n✨ **Elite Benefits:**\n• Create 3 accounts every 31 days\n• Access to 5DAYS / 14DAYS & 14DAYSVIP plans\n• Multiple plan options\n• Diversified portfolio\n\n🎯 **Commands unlocked:**\n• `add-user` - Create accounts\n• `level` - View your profile\n\n💰 **Investment:** 220.00€\n\n🌟 Flexibility = Success!",
+                    "how_many_accounts_can_be_created": 3,
+                    "days_active": 31,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP"
+                    ],
+                    "price": "220.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user"
+                    ]
+                },
+                {
+                    "level_name": "5",
+                    "description": "⚔️ **MODERATOR INVESTOR** ⚔️\n\n🛡️ Gain moderation powers!\n\n✨ **Moderator Benefits:**\n• Kick members from chat (1 per hour)\n• Block attacks for 10 minutes (1 per day)\n• Community management tools\n• Maintain server quality\n\n🎯 **Commands unlocked:**\n• `kick` - Remove problematic users\n• `blockattack` - Temporary attack block\n\n💰 **Investment:** 300.00€\n\n🔨 Power + Responsibility!",
+                    "how_many_accounts_can_be_created": 2,
+                    "days_active": 14,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP"
+                    ],
+                    "price": "300.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user",
+                        "kick"
+                    ]
+                },
+                {
+                    "level_name": "6",
+                    "description": "🏆 **PREMIUM+ INVESTOR** 🏆\n\n💎 Ultimate plan access!\n\n✨ **Premium+ Benefits:**\n• Create 1 account every 31 days\n• Access to 5DAYS / 14DAYS/ 14DAYSVIP & 31DAYS plan\n• Maximum duration accounts\n• Premium client offerings\n\n🎯 **Commands unlocked:**\n• `add-user` - Create accounts\n• `level` - View your profile\n\n💰 **Investment:** 390.00€\n\n⏰ Time is money!",
+                    "how_many_accounts_can_be_created": 3,
+                    "days_active": 14,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP",
+                        "31DAYS"
+                    ],
+                    "price": "390.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user",
+                        "kick",
+                        "block attack"
+                    ]
+                },
+                {
+                    "level_name": "7",
+                    "description": "🕵️ **INTELLIGENCE INVESTOR** 🕵️\n\n📊 Master of information!\n\n✨ **Intelligence Benefits:**\n• Access to attack logs & analytics\n• Dog system unlocked (1 dog)\n• Monitor attack patterns\n• Strategic insights\n\n🎯 **Commands unlocked:**\n• `logs` - View attack history\n• `dog add` - Add followers\n• `dog del` - Remove followers\n• `dog list` - View your pack\n\n💰 **Investment:** 520.00€\n\n📈 Knowledge is power!",
+                    "how_many_accounts_can_be_created": 3,
+                    "days_active": 14,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP",
+                        "31DAYS"
+                    ],
+                    "price": "520.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user",
+                        "kick",
+                        "block attack",
+                        "logs search",
+                        "logs count",
+                        "dog",
+                        "dog add",
+                        "dog del",
+                        "dog list"
+                    ]
+                },
+                {
+                    "level_name": "8",
+                    "description": "🎖️ **SENIOR MODERATOR** 🎖️\n\n👁️ Full visibility & control!\n\n✨ **Senior Benefits:**\n• Kick members from C2\n• View online users list\n• Advanced moderation tools\n• Community oversight\n\n🎯 **Commands unlocked:**\n• `kick-c2` - Remove C2 users\n• `online` - View active users\n• `who` - User tracking\n\n💰 **Investment:** 670.00€\n\n👮 Guardian of the network!",
+                    "how_many_accounts_can_be_created": 2,
+                    "days_active": 7,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP",
+                        "31DAYS"
+                    ],
+                    "price": "670.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user",
+                        "kick",
+                        "blockattack",
+                        "logs search",
+                        "logs count",
+                        "dog",
+                        "dog add",
+                        "dog del",
+                        "dog list",
+                        "online",
+                        "who"
+                    ]
+                },
+                {
+                    "level_name": "9",
+                    "description": "⚡ **ENFORCER INVESTOR** ⚡\n\n🔒 Ultimate control power!\n\n✨ **Enforcer Benefits:**\n• Lock/unlock user accounts\n• Disciplinary actions\n• User management\n• Maintain order\n\n⚠️ **Warning:**\nAbuse of power = Sanctions!\n\n🎯 **Commands unlocked:**\n• `to lockuser` - Restrict users\n• `to unlockuser` - Release users\n\n💰 **Investment:** 910.00€\n\n🛡️ With great power...",
+                    "how_many_accounts_can_be_created": 3,
+                    "days_active": 7,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP",
+                        "31DAYS",
+                        "API31"
+                    ],
+                    "price": "910.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user",
+                        "kick",
+                        "blockattack",
+                        "logs search",
+                        "logs count",
+                        "dog",
+                        "dog add",
+                        "dog del",
+                        "dog list",
+                        "online",
+                        "who",
+                        "to"
+                    ]
+                },
+                {
+                    "level_name": "10",
+                    "description": "👑 **LEGENDARY INVESTOR** 👑\n\n🌟 The ultimate achievement!\n\n✨ **Legendary Benefits:**\n• Create 3 accounts every 14 days\n• Access to ALL C2 plans\n  - 5DAYS\n  - 14DAYS\n  - 14DAYSVIP\n  - 31DAYS\n - APIVIP\n• Maximum flexibility\n• Top-tier privileges\n• Elite investor status\n\n🎯 **Commands unlocked:**\n• Full investment toolkit\n• All previous perks included\n\n💰 **Investment:** 1200.00€\n\n🏅 You've reached the top!",
+                    "how_many_accounts_can_be_created": 5,
+                    "days_active": 7,
+                    "available_plan_name_for_create_account": [
+                        "5DAYS",
+                        "14DAYS",
+                        "14DAYSVIP",
+                        "31DAYS",
+                        "APIVIP"
+                    ],
+                    "price": "1200.00",
+                    "acces_to_commands": [
+                        "level",
+                        "add-user",
+                        "kick",
+                        "blockattack",
+                        "logs search",
+                        "logs count",
+                        "dog",
+                        "dog add",
+                        "dog del",
+                        "dog list",
+                        "online",
+                        "who",
+                        "to",
+                        "ban"
+                    ]
+                }
+            ]
+        }
+    }
+}

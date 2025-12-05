@@ -1,0 +1,1 @@
+[<<$spinner_custom>>] [<<$cnc_name>>] Uptime: <<$uptime_cnc>> <<$spinner>> Expiry Date:[<<$user.time_expiry_fmt_1>>] <<$spinner>> Daily Attacks:[<<$user.daily_attack_left>>/<<$user.daily_attack_limit>>] <<$spinner_loading>>

