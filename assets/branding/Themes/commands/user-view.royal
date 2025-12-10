@@ -16,6 +16,7 @@
 
  [97mCustom Role[38;5;45m: [97m<<$user.custom_role>>
  [97mVIP Status[38;5;45m: [97m<<$user.vip>>
+ [97mAPI Status[38;5;45m: [97m<<$user.api>> 
  [97mReseller Status[38;5;45m: [97m<<$user.reseller>>
  [97mHolder Status[38;5;45m: [97m<<$user.holder>>
  [97mPrivate Status[38;5;45m: [97m<<$user.private>> 

@@ -137,7 +137,7 @@ URL: https://YOUR_CLOUDFLARE_DOMAIN/admin/key_info?username=YOUR_ADMIN_USERNAME_
             "ip_address": "IP ADRESS",
             "license_key": "License Key",
              "product_name": "Royal SRC",
-            "royal_src_version": "1.8.7.0"
+            "royal_src_version": "1.8.7.1"
         }
 
 # All users API endpoints
