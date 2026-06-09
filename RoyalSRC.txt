@@ -1,20 +1,18 @@
 ✔️Thanks For Purchasing @RoyalSRC :
 
 🌐 For Download Folder 2 Choice:
-➡️ 1: API Link: https://royal-api.online/?license=YOUR_KEY_HERE&product=RoyalSRC
-➡️ 2: On my Web site: https://Royalprojets.com/profile/YOUR_DISCORD_ID
-➡️ 3: ( you can use Royal Proxy ( https://discord.gg/6DQPDkdYxr ) for proxy your backend
-
-( Click here To view your License Key https://royalprojets.com/profile/YOUR_DISCORD_ID )
+➡️ 1: Github Link: https://github.com/royaloakap/Royal-SRC
+➡️ 3: ( you can use Royal Proxy 
+( https://github.com/royaloakap/Royal-Proxy ) for proxy your backend
 
 =============================================
-➡️Customer's Group (FAQ) : https://discord.gg/3PDtqCpMEe
-➡️For Support Contact : https://discord.gg/Gq6SVG4mp8
+➡️Customer's Group (FAQ) : https://discord.gg/9rdCNkevnu
+➡️For Support Contact : https://discord.gg/9rdCNkevnu
 ➡️View All Previews :  (https://t.me/RoyalSRC)
 =============================================
 
 You are allowed One IPV4 per license if your backend gets banned or you need to reset the IP associated with your license 
-Contact this bot: t.me/Royal_License_Manager_bot And do the command /reset
+Contact this bot: t.me/Royal_license_system_bot And do the command /reset
 
 Do not share your products ( FILE, KEY, CREDENTIALS )
 Respect the administrators/members of our PROJETS

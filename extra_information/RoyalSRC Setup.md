@@ -4,6 +4,7 @@ Thank you for choosing Royal SRC; you won't regret it! 👑
 
 **Current Royal SRC version**: `1.8.7.2`
 
+Discord: https://discord.gg/9rdCNkevnu
 Setup video tutorial: https://discord.com/channels/1358053746420219995/1358060457138852020
 
 ---
@@ -21,6 +22,7 @@ Setup video tutorial: https://discord.com/channels/1358053746420219995/135806045
 - https://discord.com/channels/1358053746420219995/1358060457138852020
 - https://discord.com/channels/1358053746420219995/1358060485089562729
 - https://royalprojets.com
+- https://discord.gg/9rdCNkevnu
 
 ---
 
